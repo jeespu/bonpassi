@@ -1,3 +1,5 @@
+// Testi kommentti
+
 var mysql = require('mysql');
 var JAWSDB_URL = 'mysql://rkhs71ydpn11g37c:zauyntbmzwxhi29l@q7cxv1zwcdlw7699.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/fg62ry4ik09ydqu1'
 try {
@@ -53,9 +55,6 @@ app.listen(port, () => {
 console.log('Server is up on port ' + port)
 })
 
-module.exports = {
-    app,
-    connection
-}
+module.exports = app;
 
 
