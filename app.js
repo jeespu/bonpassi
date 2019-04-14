@@ -11,12 +11,8 @@ const port = process.env.PORT || 3000;
 
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
-const db = mysql.createConnection ({
-    host: 'q7cxv1zwcdlw7699.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',
-    user: 'rkhs71ydpn11g37c',
-    password: 'zauyntbmzwxhi29l',
-    database: 'fg62ry4ik09ydqu1'
-});
+const JAWSDB_URL = 'mysql://rkhs71ydpn11g37c:zauyntbmzwxhi29l@q7cxv1zwcdlw7699.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/fg62ry4ik09ydqu1';
+const db = mysql.createConnection (JAWSDB_URL);
 
 // connect to database
 db.connect((err) => {
