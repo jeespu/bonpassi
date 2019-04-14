@@ -15,7 +15,7 @@ app.get('/', function(req, res, next) {
 			} else {
 				// render to views/user/list.ejs template file
 				res.render('user/list', {
-					title: 'User List', 
+					title: req.session.user, 
 					data: rows
 				})
 			}
