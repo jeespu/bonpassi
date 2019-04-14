@@ -14,8 +14,8 @@ including header content which is common for all pages
 <table width='80%' border=0>
 
 	<tr style='text-align:left; background-color:#CCC'>
-		<th>Name</th>
-		<th>Age</th>
+		<th>First name</th>
+		<th>Last name</th>
 		<th>Email</th>
 		<th>Action</th>
 	</tr>
@@ -30,8 +30,8 @@ including header content which is common for all pages
 	<% if (data) { %>
 	<% data.forEach(function(user){ %>
 		<tr>
-			<td><%= user.name %></td>
-			<td><%= user.age %></td>
+			<td><%= user.firstname %></td>
+			<td><%= user.lastname %></td>
 			<td><%= user.email %></td>
 			<td>
 				<div style="float:left">
