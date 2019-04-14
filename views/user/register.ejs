@@ -11,23 +11,27 @@ including header content which is common for all pages
 	<p style="color:green"><%- messages.success %></p>
 <% } %>
 
-<form action="/users/add" method="post" name="form1">
+<form action="/register" method="post" name="form1">
 	<table width="25%" border="0">
 		<tr> 
-			<td>Name</td>
-			<td><input type="text" name="name" id="name" value="<%= name %>" /></td>
+			<td>First name</td>
+			<td><input type="text" name="firstname" id="firstname" value="<%= firstname %>" /></td>
 		</tr>
 		<tr> 
-			<td>Age</td>
-			<td><input type="text" name="age" value="<%= age %>" /></td>
+			<td>Last name</td>
+			<td><input type="text" name="lastname" value="<%= lastname %>" /></td>
 		</tr>
 		<tr> 
 			<td>Email</td>
 			<td><input type="text" name="email" value="<%= email %>" /></td>
 		</tr>
+        <tr> 
+			<td>Password</td>
+			<td><input type="text" name="password" value="<%= password %>" /></td>
+		</tr>
 		<tr> 
 			<td></td>
-			<td><input type="submit" name="Submit" value="Add" /></td>
+			<td><input type="submit" name="Submit" value="Submit" /></td>
 		</tr>
 	</table>
 </form>

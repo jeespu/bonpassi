@@ -1,6 +1,6 @@
 var express = require('express')
 var app = express()
-
+const bcrypt = require('bcryptjs')
 var mysql = require('mysql')
 
 /**
@@ -44,6 +44,7 @@ app.set('view engine', 'ejs')
  */ 
 var index = require('./routes/index')
 var users = require('./routes/users')
+var register = require('./routes/register')
 
 
 /**
@@ -113,6 +114,7 @@ app.use(flash())
 
 app.use('/', index)
 app.use('/users', users)
+app.use('/register', register)
 
 app.listen(port, function(){
 	console.log('Server running at port 3000: http://127.0.0.1:3000')
