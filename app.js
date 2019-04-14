@@ -10,6 +10,15 @@ catch (e) {
     console.log("Connection unsuccesful")
 }
 
+connection.connect();
+ 
+connection.query('SELECT * FROM USER', function (error, results, fields) {
+  if (error) throw error;
+  console.log('The solution is: ', results);
+});
+ 
+connection.end();
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
