@@ -13,19 +13,15 @@ app.post("/login", (req, res) => {
    let email = req.body.email;
    let pass = req.body.password;
 
-   let sql = "SELECT userid, firstname, lastname, email, profilepicurl FROM `user` WHERE `email`='" + email + "' and password = '" + pass + "'";
-   console.log(sql);
+   let sql = "SELECT userid, firstname, lastname, email, password, profilepicurl FROM `user` WHERE `email`='" + email + "'";
+
+//   console.log(sql);
    req.getConnection(function (error, conn) {
-      conn.query(sql, function (err, result) {
-         console.log(result);
-         //if(err) throw err
-         if (err || result.length < 1) {
-            req.flash('error', err)
-            // render to views/user/add.ejs
-            res.render('index', {
-               title: 'Login incorrect',
-            })
-         } else {
+      conn.query(sql, function (err, result, fields) {
+          
+          var isMatch = bcrypt.compareSync(pass, result[0].password);
+         
+          if (isMatch) {
             // render to views/user/add.ejs
             req.session.userId = result[0].userid;
             req.session.user = result[0].firstname;
@@ -33,6 +29,18 @@ app.post("/login", (req, res) => {
                title: 'Logged In as ' + req.session.user,
             })
          }
+         else if (err || result.length < 1) {
+            req.flash('error', err)
+            // render to views/user/add.ejs
+            res.render('index', {
+               title: 'Error',
+            })
+         }
+          else {
+              res.render('index', {
+                  title: 'Login incorrect'
+              })
+          }
       })
    })
 
@@ -61,15 +69,18 @@ app.post('/register', function (req, res, next) {
       // const password = req.sanitize('password').escape().trim();
       // const hashedPassword = bcrypt.hash(password, 8);
 
+       var password = req.sanitize('password').escape().trim();
+       var hashedPassword = bcrypt.hashSync(password, 8);
+       
       var user = {
          firstname: req.sanitize('firstname').escape().trim(),
          lastname: req.sanitize('lastname').escape().trim(),
          email: req.sanitize('email').escape().trim(),
-         password: req.sanitize('password').escape().trim(),
+         password: hashedPassword,
       }
 
       console.log(user.password);
-      let sql = "INSERT INTO `user`(`firstname`,`lastname`, `email`, `password`) VALUES ('" + user.firstname + "','" + user.lastname + "','" + user.email + "','" + user.password + "')";
+      let sql = "INSERT INTO `user`(`firstname`,`lastname`, `email`, `password`) VALUES ('" + user.firstname + "','" + user.lastname + "','" + user.email + "','" + hashedPassword + "')";
 
       req.getConnection(function (error, conn) {
          conn.query(sql, function (err, result) {
