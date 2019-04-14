@@ -1,0 +1,3 @@
+-Ulkoasu
+-Jos salasana/sähköposti loginissa on väärä, servu kaatuu
+-Loginin siirtäminen ulkoiseen tiedostoon

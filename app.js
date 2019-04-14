@@ -67,6 +67,8 @@ var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
+app.use(express.static(__dirname + '/public'));
+
 
 /**
  * This module let us use HTTP verbs such as PUT or DELETE 
@@ -109,7 +111,6 @@ app.use(session({
 	cookie: { maxAge: 60000 }
 }))
 app.use(flash())
-
 
 app.use('/', index)
 app.use('/users', users)
