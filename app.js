@@ -1,5 +1,8 @@
 var mysql = require('mysql');
 var connection = mysql.createConnection(process.env.JAWSDB_URL);
+if (connection) {
+    console.log("Connection succesful!")
+};
 
 connection.connect();
 
