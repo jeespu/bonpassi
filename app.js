@@ -12,7 +12,6 @@ var myConnection  = require('express-myconnection')
  * Load the file/module and its values
  */ 
 
-
 var config = require('./config')
 var dbOptions = {
 	host:	  config.database.host,
