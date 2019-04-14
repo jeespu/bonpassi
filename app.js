@@ -1,8 +1,11 @@
 var mysql = require('mysql');
-var connection = mysql.createConnection(process.env.JAWSDB_URL);
-if (connection) {
+try {
+    var connection = mysql.createConnection(process.env.JAWSDB_URL);
     console.log("Connection succesful!")
-};
+}
+catch (e) {
+    console.log("Connection unsuccesful")
+}
 
 var createError = require('http-errors');
 var express = require('express');
