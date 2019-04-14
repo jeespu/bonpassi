@@ -22,6 +22,9 @@ var dbOptions = {
 	port: 	  config.database.port, 
 	database: config.database.db
 }
+
+const port = process.env.PORT || 3000;
+
 /**
  * 3 strategies can be used
  * single: Creates single database connection which is never closed.
@@ -111,6 +114,6 @@ app.use(flash())
 app.use('/', index)
 app.use('/users', users)
 
-app.listen(3000, function(){
+app.listen(port, function(){
 	console.log('Server running at port 3000: http://127.0.0.1:3000')
 })
