@@ -29,8 +29,9 @@ app.post("/login", (req, res) => {
             if (isMatch) {
                req.session.userId = result[0].userid;
                req.session.user = result[0].firstname;
+               req.session.isLoggedIn = true;
                res.render('index', {
-                  isLoggedIn: true,
+                  isLoggedIn: req.session.isLoggedIn,
                   title: 'Logged In as ' + req.session.user,
                })
             } else if (err || result.length < 1) {

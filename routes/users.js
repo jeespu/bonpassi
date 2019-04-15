@@ -15,8 +15,9 @@ app.get('/', function(req, res, next) {
 			} else {
 				// render to views/user/list.ejs template file
 				res.render('user/list', {
-					title: req.session.user, 
-					data: rows
+               title: req.session.user, 
+               isLoggedIn: req.session.isLoggedIn,
+					data: rows,
 				})
 			}
 		})
