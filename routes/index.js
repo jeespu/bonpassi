@@ -6,7 +6,6 @@ app.get('/', function (req, res) {
    if (req.session.user === undefined) {
       res.render('index', {
          title: 'Jyväskylä-app',
-         isLoggedIn: false
       });
    } else {
       res.render('index', {
@@ -38,12 +37,10 @@ app.post("/login", (req, res) => {
                req.flash('error', err)
                res.render('index', {
                   title: 'Error',
-                  isLoggedIn: false
                })
             } else {
                res.render('index', {
                   title: 'Login incorrect',
-                  isLoggedIn: false
                })
             }
          } else {
@@ -52,7 +49,6 @@ app.post("/login", (req, res) => {
             // res.redirect('/');
             res.render('index', {
                title: 'Incorrect login credentials.',
-               isLoggedIn: false
             });
          }
       })
@@ -63,7 +59,6 @@ app.get('/logout', function (req, res) {
    req.session = req.session.destroy();
    res.render('index', {
       title: 'Jyväskylä-app',
-      isLoggedIn: false
    });
 })
 

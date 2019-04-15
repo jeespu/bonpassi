@@ -35,7 +35,8 @@
                </form>
 
                <!-- JOS ON LOGGED OUT, RENDERÖI TÄMÄ OSA -->
-               <% if (!isLoggedIn) { %>
+
+               <% if (typeof isLoggedIn === 'undefined') { %>
                <li class="dropdown order-1">
                   <button type="button" id="dropdownMenu1" data-toggle="dropdown"
                      class="btn btn-outline-secondary dropdown-toggle">Kirjaudu sisään <span
