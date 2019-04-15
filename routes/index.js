@@ -19,7 +19,7 @@ app.post("/login", (req, res) => {
    // get data from login-form
    let email = req.body.email;
    let pass = req.body.password;
-   let sql = "SELECT userid, firstname, lastname, email, password, profilepicurl FROM `user` WHERE `email`='" + email + "'";
+   let sql = "SELECT userid, firstname, lastname, email, password, profilepicurl, admin FROM `user` WHERE `email`='" + email + "'";
    //   console.log(sql);
    req.getConnection(function (error, conn) {
       conn.query(sql, function (err, result, fields) {
@@ -30,6 +30,7 @@ app.post("/login", (req, res) => {
                req.session.userId = result[0].userid;
                req.session.user = result[0].firstname;
                req.session.isLoggedIn = true;
+                req.session.admin = result[0].admin; // User who logged in = admin??
                res.render('index', {
                   isLoggedIn: req.session.isLoggedIn,
                   title: 'Logged In as ' + req.session.user,
