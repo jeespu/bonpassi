@@ -13,7 +13,7 @@
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
-    <link href="/css/style.css" rel="stylesheet" type="text/css">
+   <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body class="col-md-6 mx-auto">
@@ -29,15 +29,18 @@
             </ul>
             <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
                <form class="form-inline my-2 my-lg-0">
-                  <input id="search" class="form-control mr-sm-2" type="search" placeholder="Hae tapahtumia ja paikkoja" aria-label="Search">
+                  <input id="search" class="form-control mr-sm-2" type="search" placeholder="Hae tapahtumia ja paikkoja"
+                     aria-label="Search">
                   <button class="btn btn-outline-light my-2 mr-2 my-sm-0" type="submit">Hae</button>
-                </form>
-                
-               <!-- JOS ON LOGGED IN, RENDERÖI TÄMÄ OSA -->
-                <li class="dropdown order-1">
+               </form>
+
+               <!-- JOS ON LOGGED OUT, RENDERÖI TÄMÄ OSA -->
+               <% if (!isLoggedIn) { %>
+               <li class="dropdown order-1">
                   <button type="button" id="dropdownMenu1" data-toggle="dropdown"
-                     class="btn btn-outline-secondary dropdown-toggle">Kirjaudu sisään <span class="caret"></span></button>
-                    
+                     class="btn btn-outline-secondary dropdown-toggle">Kirjaudu sisään <span
+                        class="caret"></span></button>
+
                   <ul class="dropdown-menu dropdown-menu-right mt-2" style="width: 250px; background-color: #383838;">
                      <li class="px-2 py-2">
                         <form class="form" role="form" action="/login" method="POST">
@@ -54,15 +57,22 @@
                            </div>
                            <div class="form-group text-center">
                               <small><a href="/register">Rekisteröidy</a></small><br>
-                              <small><a href="#" data-toggle="modal" data-target="#modalPassword">Salasana unohtunut?</a></small>
+                              <small><a href="#" data-toggle="modal" data-target="#modalPassword">Salasana
+                                    unohtunut?</a></small>
                            </div>
                         </form>
                      </li>
                   </ul>
-              </li>
-                <!-- PÄÄTTYY TÄHÄN -->
-                <!-- MUUTEN RENDERÖI SEURAAVA OSA ELI LOGOUT -->
-                
+               </li>
+               <% } else { %>
+               <li class="dropdown order-1">
+                  <a href="/logout">
+                     <button type="button" class="btn btn-outline-secondary">Kirjaudu Ulos 
+                     </button>
+                  </a>
+               </li>
+               <% } %>
+
             </ul>
          </div>
       </div>
@@ -86,7 +96,7 @@
          </div>
       </div>
    </div>
-    
-    <div id="content" style="padding-top: 80px;">
-    <h1><%= title %></h1>
-    </div>
+
+   <div id="content" style="padding-top: 80px;">
+      <h1><%= title %></h1>
+   </div>
