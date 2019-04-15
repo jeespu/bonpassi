@@ -106,8 +106,7 @@ app.use(cookieParser('keyboard cat'))
 app.use(session({ 
 	secret: 'keyboard cat',
 	resave: false,
-	saveUninitialized: true,
-    cookie: { maxAge: 30000 }
+	saveUninitialized: true
 }))
 app.use(flash())
 
