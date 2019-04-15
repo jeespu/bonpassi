@@ -5,11 +5,11 @@ const bcrypt = require('bcryptjs')
 app.get('/', function(req, res) {
 	if (req.session.user === undefined) {
 		res.render('index', {
-			title: 'Jyväskylä-app',
+			title: 'Tervetuloa, vieras',
 		});
 	} else {
 		res.render('index', {
-			title: 'Hello ' + req.session.user,
+			title: 'Tervetuloa takaisin, ' + req.session.user,
 			isLoggedIn: true
 		});
 	}
@@ -33,7 +33,7 @@ app.post("/login", (req, res) => {
 					req.session.admin = result[0].admin; // User who logged in = admin??
 					res.render('index', {
 						isLoggedIn: req.session.isLoggedIn,
-						title: "Hello " + req.session.user,
+						title: "Tervetuloa takaisin, " + req.session.user,
 					})
 				} else if (err || result.length < 1) {
 					req.flash('error', err)
