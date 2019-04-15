@@ -7,3 +7,9 @@ body {
     color: snow;
     text-shadow: 4px 4px 4px black;
 }
+
+#content {
+    padding-left: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+}

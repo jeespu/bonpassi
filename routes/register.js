@@ -4,14 +4,19 @@ const bcrypt = require('bcryptjs');
 
 // REGISTRATION FORM
 app.get('/', function (req, res, next) {
-   // render to views/user/register.ejs
-   res.render('user/register', {
-      title: 'Register',
-      firstname: '',
-      lastname: '',
-      email: '',
-      password: ''
-   })
+    var isLoggedIn = req.session.isLoggedIn;
+    if (isLoggedIn) {
+res.redirect('/');
+    } else {
+       // render to views/user/register.ejs
+       res.render('user/register', {
+          title: 'Register',
+          firstname: '',
+          lastname: '',
+          email: '',
+          password: ''
+       })
+    }
 });
 
 app.post('/', async function (req, res, next) {
