@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 const bcrypt = require('bcryptjs')
+
 app.get('/', function(req, res) {
 	if (req.session.user === undefined) {
 		res.render('index', {
@@ -8,11 +9,12 @@ app.get('/', function(req, res) {
 		});
 	} else {
 		res.render('index', {
-			title: 'Logged in as ' + req.session.user,
+			title: 'Hello ' + req.session.user,
 			isLoggedIn: true
 		});
 	}
 })
+
 app.post("/login", (req, res) => {
 	// get data from login-form
 	let email = req.body.email;
@@ -31,7 +33,7 @@ app.post("/login", (req, res) => {
 					req.session.admin = result[0].admin; // User who logged in = admin??
 					res.render('index', {
 						isLoggedIn: req.session.isLoggedIn,
-						title: 'Logged In as ' + req.session.user,
+						title: "Hello " + req.session.user,
 					})
 				} else if (err || result.length < 1) {
 					req.flash('error', err)

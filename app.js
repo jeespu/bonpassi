@@ -43,7 +43,7 @@ app.set('view engine', 'ejs')
 var index = require('./routes/index')
 var users = require('./routes/users')
 var register = require('./routes/register')
-
+var search = require('./routes/search')
 
 /**
  * Express Validator Middleware for Form Validation
@@ -111,9 +111,10 @@ app.use(session({
 app.use(flash())
 
 app.use('/', index)
+app.use('/search', search)
 app.use('/users', users)
 app.use('/register', register)
 
 app.listen(port, function(){
-	console.log('Server running')
+	console.log('Server running on port ')
 })
