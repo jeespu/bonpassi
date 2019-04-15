@@ -2,7 +2,6 @@ var express = require('express')
 var app = express()
 var mysql = require('mysql')
 var EventSearch = require("facebook-events-by-location-core");
-
 /**
  * This middleware provides a consistent API 
  * for MySQL connections during request/response life cycle
@@ -108,7 +107,7 @@ app.use(session({
 	secret: 'keyboard cat',
 	resave: false,
 	saveUninitialized: true,
-	cookie: { maxAge: 60000 }
+    cookie: { maxAge: 30000 }
 }))
 app.use(flash())
 

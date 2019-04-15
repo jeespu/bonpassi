@@ -1,5 +1,4 @@
 - Ulkoasu
-- KORJAA: Jos salasana/sähköposti loginissa on väärä, servu kaatuu
 - Loginin siirtäminen ulkoiseen tiedostoon
 - FB-eventtihaku (+AJAX-systeemi hakukenttään?)
 - Miten saadaan ravintolat yms tietokantaan, vai saadaanko/tarviiko saada?
