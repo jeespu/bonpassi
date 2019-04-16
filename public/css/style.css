@@ -15,3 +15,10 @@ body {
     padding-right: 50px;
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+tr {
+    height: 20px;
+    :nth-child(2n) {
+        color: darkslategray;
+    }
+}

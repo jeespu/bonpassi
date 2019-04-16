@@ -5,13 +5,15 @@
 	<tr style='text-align:left; background-color: rgba(0,0,0,0.5); font-size: 1.2em;'>
 		<th>Nimi</th>
 		<th>Osoite</th>
+        <th>Kategoria</th>
 	</tr>
 	
 	<% if (typeof results !== 'undefined') { %>
 	<% results.forEach(function(result){ %>
 		<tr>
-			<td><%= result.display_name %></td>
-			<td><%= result.address %></td>
+			<td><%= result.name %></td>
+            <td><%= result.formatted_address.split(',')[0] %></td>
+			<td><%= result.types[0] %></td>
 		</tr>
 	<% }) %>
 	<% } %>
