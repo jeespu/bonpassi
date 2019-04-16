@@ -29,8 +29,7 @@ app.get('/', function (req, res, next) {
                       return;
                   case 'cafe':
                       result.types[0] = 'Kahvila';
-                      return;
-                          
+                      return;    
               }
           })
           res.render('searchresults', {
