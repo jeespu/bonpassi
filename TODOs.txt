@@ -1,4 +1,3 @@
 - Ulkoasu
-- Loginin siirtäminen ulkoiseen tiedostoon
-- FB-eventtihaku (+AJAX-systeemi hakukenttään?)
-- Miten saadaan ravintolat yms tietokantaan, vai saadaanko/tarviiko saada?
+- Loginin siirtäminen ulkoiseen tiedostoon ?
+- Appi kaatuu kun yritetään kirjautua ei-sähköpostilla ym (esim asd ja asd)

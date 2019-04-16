@@ -1,3 +1,22 @@
 <%- include layouts/header.ejs %>
 
+<table width="80%" border=0 class="mx-auto">
+
+	<tr style='text-align:left; background-color: rgba(0,0,0,0.5); font-size: 1.2em;'>
+		<th>Nimi</th>
+		<th>Osoite</th>
+	</tr>
+	
+	<% if (typeof results !== 'undefined') { %>
+	<% results.forEach(function(result){ %>
+		<tr>
+			<td><%= result.display_name %></td>
+			<td><%= result.address %></td>
+		</tr>
+	<% }) %>
+	<% } %>
+
+</table>
+
+
 <%- include layouts/footer.ejs %>
