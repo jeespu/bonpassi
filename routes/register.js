@@ -4,18 +4,18 @@ const bcrypt = require('bcryptjs');
 
 // REGISTRATION FORM
 app.get('/', function (req, res, next) {
-    if (req.session.isLoggedIn) {
-res.redirect('/');
-    } else {
-       // render to views/user/register.ejs
-       res.render('user/register', {
-          title: 'Register',
-          firstname: '',
-          lastname: '',
-          email: '',
-          password: ''
-       })
-    }
+   if (req.session.isLoggedIn) {
+      res.redirect('/');
+   } else {
+      // render to views/user/register.ejs
+      res.render('user/register', {
+         title: 'Register',
+         firstname: '',
+         lastname: '',
+         email: '',
+         password: ''
+      })
+   }
 });
 
 app.post('/', async function (req, res, next) {
@@ -41,9 +41,9 @@ app.post('/', async function (req, res, next) {
       // const password = req.sanitize('password').escape().trim();
       // const hashedPassword = bcrypt.hash(password, 8);
 
-       var password = req.sanitize('password').escape().trim();
-       var hashedPassword = bcrypt.hashSync(password, 8);
-       
+      var password = req.sanitize('password').escape().trim();
+      var hashedPassword = bcrypt.hashSync(password, 8);
+
       var user = {
          firstname: req.sanitize('firstname').escape().trim(),
          lastname: req.sanitize('lastname').escape().trim(),
@@ -77,31 +77,33 @@ app.post('/', async function (req, res, next) {
                   name: '',
                   age: '',
                   email: '',
-                  password: ''
+                  password: '',
+                  meteli: metelii.event,
+                  news: news.headline
                })
             }
          })
       })
    }
-//   else {   //Display errors to user
-//      var error_msg = ''
-//      errors.forEach(function (error) {
-//         error_msg += error.msg + '<br>'
-//      })
-//      req.flash('error', error_msg)
-//
-//      /**
-//       * Using req.body.name 
-//       * because req.param('name') is deprecated
-//       */
-//      res.render('user/register', {
-//         title: 'Add New User',
-//         firstname: req.body.name,
-//         age: req.body.age,
-//         email: req.body.email,
-//         password: req.body.password
-//      })
-//   }
+   //   else {   //Display errors to user
+   //      var error_msg = ''
+   //      errors.forEach(function (error) {
+   //         error_msg += error.msg + '<br>'
+   //      })
+   //      req.flash('error', error_msg)
+   //
+   //      /**
+   //       * Using req.body.name 
+   //       * because req.param('name') is deprecated
+   //       */
+   //      res.render('user/register', {
+   //         title: 'Add New User',
+   //         firstname: req.body.name,
+   //         age: req.body.age,
+   //         email: req.body.email,
+   //         password: req.body.password
+   //      })
+   //   }
 })
 
 module.exports = app
