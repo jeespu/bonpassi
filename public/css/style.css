@@ -11,6 +11,9 @@ a {
     color: aquamarine;
 }
 
+.container {
+}
+
 a:hover {
     color: cadetblue;
 }
@@ -84,4 +87,33 @@ a:hover {
 
 .headlinediv:nth-child(even) {
     background-color: darkslategray;
+}
+
+.placerow {
+    height: 50px;
+    width: 80%;
+}
+
+.placerow:hover, .eventrow:hover {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+}
+
+.eventrow {
+    height: 100px;
+    width: 80%;
+}
+
+.eventrow img {
+    height: 98px;
+    width: 146px;
+}
+
+.placerow img {
+    height: 45px;
+    width: 45px;
+}
+
+#placeresults a, #eventresults a {
+    color: black;
 }

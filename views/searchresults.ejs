@@ -1,24 +1,34 @@
 <%- include layouts/header.ejs %>
 
    <% if (typeof results !== 'undefined' && results.length > 0) { %>
-   <div>
+   <div id="placeresults">
       <h2>Paikat</h2>
       <% results.forEach(function(result){ %>
-      <div>
-         <p><%= result.name %> <a href="https://maps.google.com?q=<%= result.formatted_address.split(',')[0] %>+jyväskylä"
-               target=_blank><%= result.formatted_address.split(',')[0] %></a> <%= result.types[0] %></p>
-      </div>
+      <a href="https://maps.google.com?q=<%= result.formatted_address.split(',')[0] %>+jyväskylä"
+               target=_blank><div class="placecontainer">
+         <div class="row placerow">
+             <div class="col-sm my-auto"><%= result.name %></div>
+             <div class="col-sm my-auto"><%= result.formatted_address.split(',')[0] %></div> 
+             <div class="col-sm my-auto"><%= result.types[0] %></div>
+             <div class="col-sm my-auto"><img src="<%= result.icon %>"/></div>
+             </div>
+      </div></a>
       <% }); %>
    </div>
    <% } %>
 
    <% if (typeof eventResult !== 'undefined' && eventResult.length > 0) { %>
-   <div>
+   <div id="eventresults">
       <h2>Tapahtumat</h2>
       <% eventResult.forEach(function(result){ %>
-      <div>
-         <p><a href="<%= result.url %>" target=_blank><%= result.name %></a> <%= result.address %> <%= result.date %></p>
-      </div>
+       <a href="<%= result.url %>" target=_blank>
+           <div class="row eventrow">
+               <div class="col-sm my-auto"><%= result.name %></div>
+               <div class="col-sm my-auto"><%= result.address %></div>
+               <div class="col-sm my-auto"><%= result.date %></div>
+               <div class="col-sm my-auto"><img src="<%= result.image %>"/></div>
+           </div>
+       </a>
       <% }); %>
    </div>
    <% } %>
