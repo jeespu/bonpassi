@@ -30,11 +30,11 @@
 	</tr>
 	<% meteliResult.forEach(function(result){ %>
 		<tr>
-			<td><%= result.name %></td>
+            <td><a href="<%= result.url %>" target="_blank"><%= result.name %></a></td>
             <td><%= result.venue %></td>
 			<td><%= result.date %></td>
 		</tr>
-	<% }  ) %>
+	<% } ) %>
 </table>
 <% } %>
 

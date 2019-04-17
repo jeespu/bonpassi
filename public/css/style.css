@@ -7,6 +7,14 @@ body {
     color: snow;
 }
 
+a {
+    color: aquamarine;
+}
+
+a:hover {
+    color: cadetblue;
+}
+
 #content {
     display: block;
     overflow: auto;
