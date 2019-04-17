@@ -15,21 +15,6 @@ a:hover {
     color: cadetblue;
 }
 
-/*#content {
-    display: block;
-    overflow: auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    background-color: rgba(0, 0, 0, 0.3);
-} */
-
-tr {
-    height: 20px;
-    :nth-child(2n) {
-        color: darkslategray;
-    }
-}
-
 .inset {
   width: 48px;
   height: 48px;
@@ -78,4 +63,8 @@ tr {
 
 #profileInfo {
     font-size: 1.4em;
+}
+
+.karuselli {
+   height: 200px;
 }
