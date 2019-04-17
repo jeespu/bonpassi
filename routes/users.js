@@ -17,40 +17,41 @@ app.get('/', function(req, res, next) {
 				res.render('user/list', {
                    title: req.session.user,
                    isLoggedIn: req.session.isLoggedIn,
+                    profilePic: req.session.profilePic,
+                    userId: req.session.userId,
+                    isAdmin: req.session.isAdmin,
 					data: rows,
 				})
 			}
 		})
 	})
 })
-//
-//
-//
-//// SHOW EDIT USER FORM
-//app.get('/edit/(:id)', function(req, res, next){
-//	req.getConnection(function(error, conn) {
-//		conn.query('SELECT * FROM users WHERE id = ?', [req.params.id], function(err, rows, fields) {
-//			if(err) throw err
-//			
-//			// if user not found
-//			if (rows.length <= 0) {
-//				req.flash('error', 'User not found with id = ' + req.params.id)
-//				res.redirect('/users')
-//			}
-//			else { // if user found
-//				// render to views/user/edit.ejs template file
-//				res.render('user/edit', {
-//					title: 'Edit User', 
-//					//data: rows[0],
-//					id: rows[0].id,
-//					name: rows[0].name,
-//					age: rows[0].age,
-//					email: rows[0].email					
-//				})
-//			}			
-//		})
-//	})
-//})
+
+// SHOW EDIT USER FORM
+app.get('/edit/(:id)', function(req, res, next){
+	req.getConnection(function(error, conn) {
+		conn.query('SELECT * FROM users WHERE id = ?', [req.params.id], function(err, rows, fields) {
+			if(err) throw err
+			
+			// if user not found
+			if (rows.length <= 0) {
+				req.flash('error', 'User not found with id = ' + req.params.id)
+				res.redirect('/users')
+			}
+			else { // if user found
+				// render to views/user/edit.ejs template file
+				res.render('user/edit', {
+					title: 'Edit User', 
+					//data: rows[0],
+					id: rows[0].id,
+					name: rows[0].name,
+					age: rows[0].age,
+					email: rows[0].email					
+				})
+			}			
+		})
+	})
+})
 //
 //// EDIT USER POST ACTION
 //app.put('/edit/(:id)', function(req, res, next) {

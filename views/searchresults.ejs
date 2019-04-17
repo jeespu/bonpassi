@@ -1,7 +1,7 @@
 <%- include layouts/header.ejs %>
 
 <table width="80%" border=0 class="mx-auto">
-
+<h2>Paikat</h2>
 	<tr style='text-align:left; background-color: rgba(0,0,0,0.5); font-size: 1.2em;'>
 		<th>Nimi</th>
 		<th>Osoite</th>
@@ -12,13 +12,30 @@
 	<% results.forEach(function(result){ %>
 		<tr>
 			<td><%= result.name %></td>
-            <td><%= result.formatted_address.split(',')[0] %></td>
+            <td><a href="https://maps.google.com?q=<%= result.formatted_address.split(',')[0] %>+jyväskylä" target=_blank><%= result.formatted_address.split(',')[0] %></a></td>
 			<td><%= result.types[0] %></td>
 		</tr>
-	<% }) %>
+	<% }  ) %>
 	<% } %>
 
 </table>
 
+<% if (typeof meteliResult !== 'undefined') { %>
+<table width="80%" border=0 class="mx-auto">
+<h2>Tapahtumat</h2>
+	<tr style='text-align:left; background-color: rgba(0,0,0,0.5); font-size: 1.2em;'>
+		<th>Nimi</th>
+		<th>Paikka</th>
+        <th>Päivämäärä</th>
+	</tr>
+	<% meteliResult.forEach(function(result){ %>
+		<tr>
+			<td><%= result.name %></td>
+            <td><%= result.venue %></td>
+			<td><%= result.date %></td>
+		</tr>
+	<% }  ) %>
+</table>
+<% } %>
 
 <%- include layouts/footer.ejs %>

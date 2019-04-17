@@ -1,7 +1,6 @@
 var express = require('express')
 var app = express()
 var mysql = require('mysql')
-var EventSearch = require("facebook-events-by-location-core");
 /**
  * This middleware provides a consistent API 
  * for MySQL connections during request/response life cycle

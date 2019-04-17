@@ -3,6 +3,7 @@ var app = express();
 const bcrypt = require('bcryptjs')
 
 app.get('/', function(req, res) {
+    
 	if (req.session.user === undefined) {
 		res.render('index', {
 			title: 'Tervetuloa, vieras',
@@ -10,7 +11,10 @@ app.get('/', function(req, res) {
 	} else {
 		res.render('index', {
 			title: 'Tervetuloa takaisin, ' + req.session.user,
-			isLoggedIn: true
+			isLoggedIn: true,
+            profilePic: req.session.profilePic,
+            userId: req.session.userId,
+            isAdmin: req.session.isAdmin,
 		});
 	}
 })
@@ -29,9 +33,17 @@ app.post("/login", (req, res) => {
 				if (isMatch) {
 					req.session.userId = result[0].userid;
 					req.session.user = result[0].firstname;
+                    req.session.isAdmin = result[0].admin;
+                    if (result[0].profilepicurl !== null) {
+                        req.session.profilePic = result[0].profilepicurl;
+                    } else {
+                        req.session.profilePic = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/512px-Circle-icons-profile.svg.png'
+                    }
 					req.session.isLoggedIn = true;
-					req.session.admin = result[0].admin; // User who logged in = admin??
 					res.render('index', {
+                        userId: req.session.userId,
+                        isAdmin: req.session.isAdmin,
+                        profilePic: req.session.profilePic,
 						isLoggedIn: req.session.isLoggedIn,
 						title: "Tervetuloa takaisin, " + req.session.user,
 					})
@@ -59,7 +71,7 @@ app.post("/login", (req, res) => {
 app.get('/logout', function(req, res) {
 	req.session = req.session.destroy();
 	res.render('index', {
-		title: 'Jyväskylä-app',
+		title: 'Näkemiin!',
 	});
 })
 /** 

@@ -26,10 +26,9 @@
     "express-myconnection": "^1.0.4",
     "express-session": "^1.15.3",
     "express-validator": "^3.2.0",
-    "facebook-events-by-location-core": "^0.11.0",
-    "googleplaces": "^0.6.1",
+    "fuse.js": "^3.4.4",
+    "js-search": "^1.4.2",
     "method-override": "^2.3.9",
-    "mysql": "^2.13.0",
-    "nominatim-js": "^1.0.0"
+    "mysql": "^2.13.0"
   }
 }

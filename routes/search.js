@@ -1,48 +1,60 @@
 var express = require('express')
 var app = express()
 var fs = require('fs')
+var meteli = require('../public/json/meteli.json')
+const JsSearch = require('js-search')
 
-app.get('/', function (req, res, next) {
-    var googleMapsClient = require('@google/maps').createClient({
-      key: 'AIzaSyARxi3iKGDqUF6dr1WlHIgx_da-G2yZmvM'
-    });
-    
-    const jkl = [62.242561, 25.747499];
-    
-    googleMapsClient.places({
-        query: req.query.keyword,
-        location: jkl,
-        radius: 5000,
-        language: 'fi'
-    }, function(err, response) {
-      if (!err) {
-          response.json.results.forEach(function(result) {
-              switch (result.types[0]) {
-                  case 'night_club':
-                      result.types[0] = 'Yökerho';
-                      return;
-                  case 'bar':
-                      result.types[0] = 'Baari';
-                      return;
-                  case 'restaurant':
-                      result.types[0] = 'Ravintola';
-                      return;
-                  case 'cafe':
-                      result.types[0] = 'Kahvila';
-                      return;    
-              }
-          })
-          res.render('searchresults', {
-              results: response.json.results,
-              isLoggedIn: req.session.isLoggedIn,
-              title: "Tulokset haulla " + req.query.keyword
-          })
-          console.log(response.json.results);
-//          fs.writeFileSync('tulos.json', JSON.stringify(response.json.results))
-      }
-    });
+app.get('/', async function(req, res, next) {
+    // Places search
+	var googleMapsClient = require('@google/maps').createClient({
+		key: 'AIzaSyARxi3iKGDqUF6dr1WlHIgx_da-G2yZmvM'
+	});
+	const jkl = [62.242561, 25.747499];
+	googleMapsClient.places({
+		query: req.query.keyword,
+		location: jkl,
+		radius: 5000,
+		language: 'fi',
+        pagetoken: ""
+	}, async function(err, response) {
+		if (!err) {
+			response.json.results.forEach(function(result) {
+				switch (result.types[0]) {
+					case 'night_club':
+						result.types[0] = 'Yökerho';
+						return;
+					case 'bar':
+						result.types[0] = 'Baari';
+						return;
+					case 'restaurant':
+						result.types[0] = 'Ravintola';
+						return;
+					case 'cafe':
+						result.types[0] = 'Kahvila';
+						return;
+				}
+			})
+            
+            // Events search
+            var search = new JsSearch.Search('event');
+            search.addIndex('name');
+            search.addIndex('venue');
+            search.addIndex('date');
+            search.addDocuments(meteli.event);
+            var meteliResult = search.search(req.query.keyword);
+            
+            res.render('searchresults', {
+                meteliResult: meteliResult,
+				results: response.json.results,
+				isLoggedIn: req.session.isLoggedIn,
+				profilePic: req.session.profilePic,
+				userId: req.session.userId,
+				isAdmin: req.session.isAdmin,
+				title: "Tulokset haulla " + req.query.keyword
+			})
+		}
+	});
 })
-
 //const { NominatimJS } = require('nominatim-js');
 //app.get('/', function(req, res, next) {
 //	NominatimJS.search({ // Paikkahaku (ravintolat yms)
