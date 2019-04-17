@@ -1,23 +1,23 @@
 <%- include layouts/header.ejs %>
 
-   <% if (typeof results !== 'undefined' && results.length > 0) { %>
+   <% if (typeof placeData.results !== 'undefined' && placeData.results.length > 0) { %>
    <div>
       <h2>Paikat</h2>
-      <% results.forEach(function(result){ %>
+      <% placeData.results.forEach(place => { %>
       <div>
-         <p><%= result.name %> <a href="https://maps.google.com?q=<%= result.formatted_address.split(',')[0] %>+jyväskylä"
-               target=_blank><%= result.formatted_address.split(',')[0] %></a> <%= result.types[0] %></p>
+         <p><%= place.name %> <a href="https://maps.google.com?q=<%= place.formatted_address.split(',')[0] %>+jyväskylä"
+               target=_blank><%= place.formatted_address %></a> <%= place.types[0] %></p>
       </div>
       <% }); %>
    </div>
    <% } %>
 
-   <% if (typeof eventResult !== 'undefined' && eventResult.length > 0) { %>
+   <% if (typeof eventData !== 'undefined' && eventData.length > 0) { %>
    <div>
       <h2>Tapahtumat</h2>
-      <% eventResult.forEach(function(result){ %>
+      <% eventData.forEach(event =>{ %>
       <div>
-         <p><a href="<%= result.url %>" target=_blank><%= result.name %></a> <%= result.address %> <%= result.date %></p>
+         <p><a href="<%= event.url %>" target=_blank><%= event.name %></a> <%= event.address %> <%= event.date %></p>
       </div>
       <% }); %>
    </div>
