@@ -46,8 +46,10 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
    query = req.body.query;
+   console.log(query)
    let urlPlaces = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + query + '+in+jyvaskyla&key=AIzaSyARxi3iKGDqUF6dr1WlHIgx_da-G2yZmvM';
-   request(urlPlaces, (error, response, body) => {
+  
+   request(encodeURI(urlPlaces), (error, response, body) => {
       if (!error && response.statusCode === 200) {
          placeData = JSON.parse(body);
          placeData.results.forEach(result => {
