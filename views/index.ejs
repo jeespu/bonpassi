@@ -2,8 +2,27 @@
 including header content which is common for all pages
 -->
 <%- include layouts/header.ejs %>	
-
-    
+<div class="container">
+<div class="karuselli">
+       <div><h3><img src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>"/></h3></div>
+       <div><h3><img src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>"/></h3></div>
+       <div><h3><img src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>"/></h3></div>
+       <div><h3><img src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>"/></h3></div>
+       <div><h3><img src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>"/></h3></div>
+       </div>
+<div class="row">
+        <div id="news" class="col-sm" style="border: 2px solid black; border-radius: 10px; font-size: 0.8em; overflow:auto; height: 500px; padding: 0;">
+            <h3>Uutiset</h3>
+        <% for (var i = 0; i < news.length; i++) { %>
+            <div style="width: 100%; padding: 6px 12px 6px 12px; <%if (i % 2 === 0) { %>
+                        background-color: #3f5148;
+                        <% } %>"><a style="margin: 0; padding: 0;" href="<%= news[i].headline_url %>" target="_blank"><%= news[i].headline %></a><br><%= news[i].media %></div>
+            <% } %>
+        </div>
+        <div class="col-sm"></div>
+        <div class="col-sm"></div>
+    </div>
+    </div>
 <!--
 including footer content which is common for all pages
 -->
@@ -18,7 +37,7 @@ $(document).ready(function(){
    arrows:true,
    autoplay:true,
    autoplayspeed:2000,
-   slidesToshow: 2,
+   slidesToshow: 5,
    centerMode:true,
    centerPadding:'100px',  
     // normal options...

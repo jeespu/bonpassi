@@ -1,19 +1,24 @@
 var express = require('express');
 var app = express();
 const bcrypt = require('bcryptjs')
-const rock = require('../public/json/meteli.json')
+const metelii = require('../public/json/meteli.json')
+const news = require('../public/json/news.json')
 
 app.get('/', function(req, res) {
     
 	if (req.session.isLoggedIn === undefined) {
 		res.render('index', {
-			title: 'Tervetuloa, vieras', meteli:rock.event
+			title: 'Tervetuloa, vieras', 
+            meteli: metelii.event,
+            news: news.headline
 		});
 	} else {
 		res.render('index', {
             isLoggedIn: req.session.isLoggedIn,
             loggedUser: req.session.loggedUser,
-			title: 'Tervetuloa takaisin, ' + req.session.loggedUser.firstName, meteli:rock.event
+			title: 'Tervetuloa takaisin, ' + req.session.loggedUser.firstName, 
+            meteli: metelii.event,
+            news: news.headline
 		});
 	}
 })
