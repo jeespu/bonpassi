@@ -29,6 +29,7 @@
     "fuse.js": "^3.4.4",
     "js-search": "^1.4.2",
     "method-override": "^2.3.9",
-    "mysql": "^2.13.0"
+    "mysql": "^2.13.0",
+    "slick-carousel": "^1.8.1"
   }
 }
