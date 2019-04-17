@@ -8,10 +8,8 @@
       <h2>Paikat</h2>
       <% results.forEach(function(result){ %>
       <div>
-         <p><%= result.name %></p>
-         <p><a href="https://maps.google.com?q=<%= result.formatted_address.split(',')[0] %>+jyväskylä"
-               target=_blank><%= result.formatted_address.split(',')[0] %></a></p>
-         <p><%= result.types[0] %></p>
+         <p><%= result.name %> <a href="https://maps.google.com?q=<%= result.formatted_address.split(',')[0] %>+jyväskylä"
+               target=_blank><%= result.formatted_address.split(',')[0] %></a> <%= result.types[0] %></p>
       </div>
       <% }); %>
    </div>
@@ -22,9 +20,7 @@
       <h2>Tapahtumat</h2>
       <% eventResult.forEach(function(result){ %>
       <div>
-         <p><a href="<%= result.url %>" target=_blank><%= result.name %></a></p>
-         <p><%= result.address %></p>
-         <p><%= result.date %></p>
+         <p><a href="<%= result.url %>" target=_blank><%= result.name %></a> <%= result.address %> <%= result.date %></p>
       </div>
       <% }); %>
    </div>

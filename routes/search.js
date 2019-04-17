@@ -3,7 +3,6 @@ var app = express()
 var fs = require('fs')
 var meteli = require('../public/json/meteli.json')
 var menoinfo = require('../public/json/menoinfo.json')
-//const JsSearch = require('js-search')
 var Fuse = require('fuse.js')
 
 app.get('/', async function(req, res, next) {
@@ -62,10 +61,8 @@ app.get('/', async function(req, res, next) {
             res.render('searchresults', {
                 eventResult: eventResult,
 				results: response.json.results,
-				isLoggedIn: req.session.isLoggedIn,
-				profilePic: req.session.profilePic,
-				userId: req.session.userId,
-				isAdmin: req.session.isAdmin,
+				loggedUser: req.session.loggedUser,
+                isLoggedIn: req.session.isLoggedIn,
 				title: "Tulokset haulla " + req.query.keyword
 			})
 		}

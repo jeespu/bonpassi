@@ -5,11 +5,13 @@
             &#9776;
          </button>
          <div class="collapse navbar-collapse" id="exCollapsingNavbar">
-            <% if ((typeof isLoggedIn !== 'undefined') && (isAdmin === 1)) { %> <!-- ADMIN ONLY CONTENT -->
+            <% if (typeof isLoggedIn !== 'undefined') { %>
+             <% if (loggedUser.isAdmin === 1) { %> <!-- ADMIN ONLY CONTENT -->
              <ul class="nav navbar-nav">
                <li class="nav-item"><a href="/users" class="nav-link">Käyttäjälistaus</a></li>
             </ul>
                 <% } %>
+             <% } %>
             <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
                 
                <form class="form-inline my-2 my-lg-0" action="/search?keyword=" method="get"> <!-- TÄÄ TOIMIMAAN -->
@@ -51,9 +53,9 @@
                </li>
                <% } else { %>
                 <li>
-                    <a href="users/profile/<%= userId %>">
+                    <a href="/profile">
                 <div class="inset mx-3" title="Profiilisi">
-                  <img src="<%= profilePic %>">
+                  <img src="<%= loggedUser.profilePic %>">
                 </div>
                         </a>
               </li>
