@@ -33,7 +33,7 @@ request(urlEvents, { gzip: true }, (error, response, body) => {
    if (!error && response.statusCode === 200) {
       let data = JSON.parse(body);
       // Yhdistetään JSONit
-      eventData = Object.assign(meteli.event, menoinfo.event, data.events);
+      eventData = Object.assign(data.events, meteli.event, menoinfo.event);
    }
 })
 
