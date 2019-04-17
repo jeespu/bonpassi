@@ -68,3 +68,20 @@ a:hover {
 .karuselli {
    height: 200px;
 }
+
+#news {
+    background-color: rgba(0,0,0,0.2);
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 450px;
+    overflow:auto;
+    padding: 0;
+}
+
+.headlinediv {
+    padding: 6px 12px 6px 12px;
+}
+
+.headlinediv:nth-child(even) {
+    background-color: darkslategray;
+}
