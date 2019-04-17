@@ -41,7 +41,7 @@ request(urlEvents, { gzip: true }, (error, response, body) => {
 app.get('/', (req, res) => {
    let fuse = new Fuse(eventData, options);
    let foundEvents = fuse.search(query);
-   res.render("searchresults", { title: "Tulokset haulla " + query, placeData: placeData, eventData: foundEvents });
+   res.render("searchresults", { title: "Tulokset haulla " + query, results: placeData.results, eventResult: foundEvents });
 })
 
 app.post('/', (req, res) => {
