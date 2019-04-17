@@ -1,7 +1,6 @@
 var express = require('express')
 var app = express()
 var mysql = require('mysql')
-var EventSearch = require("facebook-events-by-location-core");
 /**
  * This middleware provides a consistent API 
  * for MySQL connections during request/response life cycle
@@ -44,6 +43,9 @@ var index = require('./routes/index')
 var users = require('./routes/users')
 var register = require('./routes/register')
 var search = require('./routes/search')
+var profile = require('./routes/profile')
+
+
 
 /**
  * Express Validator Middleware for Form Validation
@@ -114,6 +116,7 @@ app.use('/', index)
 app.use('/search', search)
 app.use('/users', users)
 app.use('/register', register)
+app.use('/profile', profile)
 
 app.listen(port, function(){
 	console.log('Server running on port ')

@@ -5,7 +5,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: snow;
-    text-shadow: 4px 4px 4px black;
+}
+
+a {
+    color: aquamarine;
+}
+
+a:hover {
+    color: cadetblue;
 }
 
 #content {
@@ -14,4 +21,62 @@ body {
     padding-left: 50px;
     padding-right: 50px;
     background-color: rgba(0, 0, 0, 0.3);
+}
+
+tr {
+    height: 20px;
+    :nth-child(2n) {
+        color: darkslategray;
+    }
+}
+
+.inset {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 0 2px rgba(255,255,255,0.6), 
+    0 1px 1px rgba(0,0,0,0.1);
+  background-color: transparent !important;
+  z-index: 999;
+}
+
+.inset img {
+  border-radius: inherit;
+  width: inherit;
+  height: inherit;
+  display: block;
+  position: relative;
+  z-index: 998;
+}
+
+#profilePic {
+    
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 0 2px rgba(255,255,255,0.6), 
+    0 1px 1px rgba(0,0,0,0.1);
+  background-color: transparent !important;
+  z-index: 999;
+}
+
+#profilePic img {
+    border: 3px solid gray;
+  border-radius: inherit;
+  width: inherit;
+  height: inherit;
+  display: block;
+  position: relative;
+  z-index: 998;
+}
+
+#profilePic img:hover {
+    border: 3px solid white;
+    cursor: pointer;
+}
+
+#profileInfo {
+    font-size: 1.4em;
 }

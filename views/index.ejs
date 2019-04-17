@@ -4,8 +4,51 @@ including header content which is common for all pages
 <%- include layouts/header.ejs %>	
 
     
-
 <!--
 including footer content which is common for all pages
 -->
 <%- include layouts/footer.ejs %>
+
+
+<script>
+
+$(document).ready(function(){
+  $('.karuselli').slick({
+   dots:true,
+   arrows:true,
+   autoplay:true,
+   autoplayspeed:2000,
+   slidesToshow: 2,
+   centerMode:true,
+   centerPadding:'100px',  
+    // normal options...
+  
+ 
+  // the magic
+  responsive: ({
+ 
+      breakpoint: 1024,
+      settings: {
+        slidesToShow:1,
+        infinite: true,
+          
+      }
+ 
+    }, {
+ 
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        dots: true,
+      }
+ 
+    }, {
+ 
+      breakpoint: 300,
+      settings: "unslick" // destroys slick  
+    
+  })
+});
+});
+
+</script>

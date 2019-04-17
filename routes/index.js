@@ -1,16 +1,19 @@
 var express = require('express');
 var app = express();
 const bcrypt = require('bcryptjs')
+const rock = require('../public/json/meteli.json')
 
 app.get('/', function(req, res) {
-	if (req.session.user === undefined) {
+    
+	if (req.session.isLoggedIn === undefined) {
 		res.render('index', {
-			title: 'Tervetuloa, vieras',
+			title: 'Tervetuloa, vieras', meteli:rock.event
 		});
 	} else {
 		res.render('index', {
-			title: 'Tervetuloa takaisin, ' + req.session.user,
-			isLoggedIn: true
+            isLoggedIn: req.session.isLoggedIn,
+            loggedUser: req.session.loggedUser,
+			title: 'Tervetuloa takaisin, ' + req.session.loggedUser.firstName, meteli:rock.event
 		});
 	}
 })
@@ -27,13 +30,34 @@ app.post("/login", (req, res) => {
 			if (result[0] !== []) {
 				const isMatch = bcrypt.compareSync(pass, result[0].password);
 				if (isMatch) {
-					req.session.userId = result[0].userid;
-					req.session.user = result[0].firstname;
-					req.session.isLoggedIn = true;
-					req.session.admin = result[0].admin; // User who logged in = admin??
+//					req.session.userId = result[0].userid;
+//					req.session.user = result[0].firstname;
+//                    req.session.firstname = result[0].firstname;
+//                    req.session.lastname = result[0].lastname;
+//                    req.session.email = result[0].email;
+//                    req.session.isAdmin = result[0].admin;
+                    req.session.isLoggedIn = true;
+                    if (result[0].profilepicurl !== null) {
+                        req.session.profilePic = result[0].profilepicurl;
+                    } else {
+                        req.session.profilePic = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/512px-Circle-icons-profile.svg.png'
+                    }
+					
+                    req.session.loggedUser = { // Wrappaa kaikki sessiomuuttujat tähän
+                        userId: result[0].userid,
+                        firstName: result[0].firstname,
+                        lastName: result[0].lastname,
+                        email: result[0].email,
+                        isAdmin: result[0].admin,
+                        profilePic: req.session.profilePic
+                    }
 					res.render('index', {
-						isLoggedIn: req.session.isLoggedIn,
-						title: "Tervetuloa takaisin, " + req.session.user,
+                        loggedUser: req.session.loggedUser,
+						title: "Tervetuloa takaisin, " + req.session.loggedUser.firstName,
+						isLoggedIn: req.session.isLoggedIn
+//                        userId: req.session.userId,
+//                        isAdmin: req.session.isAdmin,
+//                        profilePic: req.session.profilePic,
 					})
 				} else if (err || result.length < 1) {
 					req.flash('error', err)
@@ -59,9 +83,13 @@ app.post("/login", (req, res) => {
 app.get('/logout', function(req, res) {
 	req.session = req.session.destroy();
 	res.render('index', {
-		title: 'Jyväskylä-app',
+		title: 'Näkemiin!',
 	});
 })
+
+
+
+
 /** 
  * We assign app object to module.exports
  * 

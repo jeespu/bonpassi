@@ -1,0 +1,27 @@
+<!--
+including header content which is common for all pages
+-->
+<%- include ../layouts/header.ejs %>	
+		
+<div>
+    <div id="profilePic"><img src="<%= loggedUser.profilePic %>"></div>
+
+    <div id="profileInfo">
+        <%= loggedUser.firstName %>
+        <%= loggedUser.lastName %><br>
+        <%= loggedUser.email %>
+    </div>
+
+    <h2>Suosikit</h2>
+    <div>
+    ...<br>
+        ...<br>
+        ...
+    </div>
+
+</div>
+
+<!--
+including footer content which is common for all pages
+-->
+<%- include ../layouts/footer.ejs %>

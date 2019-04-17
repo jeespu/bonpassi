@@ -4,8 +4,7 @@ const bcrypt = require('bcryptjs');
 
 // REGISTRATION FORM
 app.get('/', function (req, res, next) {
-    var isLoggedIn = req.session.isLoggedIn;
-    if (isLoggedIn) {
+    if (req.session.isLoggedIn) {
 res.redirect('/');
     } else {
        // render to views/user/register.ejs

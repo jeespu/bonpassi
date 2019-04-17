@@ -9,23 +9,22 @@ app.get('/', function(req, res, next) {
 			if (err) {
 				req.flash('error', err)
 				res.render('user/list', {
-					title: 'User List', 
+					title: 'Käyttäjälistaus', 
 					data: ''
 				})
 			} else {
 				// render to views/user/list.ejs template file
 				res.render('user/list', {
-                   title: req.session.user,
-                   isLoggedIn: req.session.isLoggedIn,
-					data: rows,
+                   title: 'Käyttäjälistaus',
+                   loggedUser: req.session.loggedUser,
+                    isLoggedIn: req.session.isLoggedIn,
+				    data: rows
 				})
 			}
 		})
 	})
 })
-//
-//
-//
+
 //// SHOW EDIT USER FORM
 //app.get('/edit/(:id)', function(req, res, next){
 //	req.getConnection(function(error, conn) {
