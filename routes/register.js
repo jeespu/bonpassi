@@ -28,19 +28,6 @@ app.post('/', async function (req, res, next) {
    console.log(errors);
 
    if (!errors) {   //No errors were found.  Passed Validation!
-
-      /********************************************
-       * Express-validator module
-       
-      req.body.comment = 'a <span>comment</span>';
-      req.body.username = '   a user    ';
- 
-      req.sanitize('comment').escape(); // returns 'a &lt;span&gt;comment&lt;/span&gt;'
-      req.sanitize('username').trim(); // returns 'a user'
-      ********************************************/
-      // const password = req.sanitize('password').escape().trim();
-      // const hashedPassword = bcrypt.hash(password, 8);
-
       var password = req.sanitize('password').escape().trim();
       var hashedPassword = bcrypt.hashSync(password, 8);
 
@@ -85,25 +72,6 @@ app.post('/', async function (req, res, next) {
          })
       })
    }
-   //   else {   //Display errors to user
-   //      var error_msg = ''
-   //      errors.forEach(function (error) {
-   //         error_msg += error.msg + '<br>'
-   //      })
-   //      req.flash('error', error_msg)
-   //
-   //      /**
-   //       * Using req.body.name 
-   //       * because req.param('name') is deprecated
-   //       */
-   //      res.render('user/register', {
-   //         title: 'Add New User',
-   //         firstname: req.body.name,
-   //         age: req.body.age,
-   //         email: req.body.email,
-   //         password: req.body.password
-   //      })
-   //   }
 })
 
 module.exports = app
