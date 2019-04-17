@@ -6,9 +6,9 @@ var menoinfo = require('../public/json/menoinfo.json');
 var Fuse = require('fuse.js');
 var request = require('request');
 
-let query;
-let placeData;
-let eventData;
+let query = "";
+let placeData = {};
+let eventData = {};
 let options = {
    shouldSort: true,
    threshold: 0.6,
@@ -33,7 +33,8 @@ request(urlEvents, { gzip: true }, (error, response, body) => {
    if (!error && response.statusCode === 200) {
       let data = JSON.parse(body);
       // Yhdistetään JSONit
-      eventData = Object.assign(data.events, meteli.event, menoinfo.event);
+      eventData = meteli.event.concat(menoinfo.event, data.events);
+      //console.log(eventData)
    }
 })
 
@@ -49,6 +50,25 @@ app.post('/', (req, res) => {
    request(urlPlaces, (error, response, body) => {
       if (!error && response.statusCode === 200) {
          placeData = JSON.parse(body);
+         placeData.results.forEach(result => {
+            switch (result.types[0]) {
+               case 'night_club':
+                  result.types[0] = 'Yökerho';
+                  return;
+               case 'bar':
+                  result.types[0] = 'Baari';
+                  return;
+               case 'restaurant':
+                  result.types[0] = 'Ravintola';
+                  return;
+               case 'cafe':
+                  result.types[0] = 'Kahvila';
+                  return;
+               case 'point_of_interest':
+                  result.types[0] = 'Muu';
+                  return;
+            }
+         })
          res.redirect('/search');
       }
    })
