@@ -20,7 +20,7 @@
 
 </table>
 
-<% if (typeof meteliResult !== 'undefined') { %>
+<% if (typeof eventResult !== 'undefined') { %>
 <table width="80%" border=0 class="mx-auto">
 <h2>Tapahtumat</h2>
 	<tr style='text-align:left; background-color: rgba(0,0,0,0.5); font-size: 1.2em;'>
@@ -28,10 +28,10 @@
 		<th>Paikka</th>
         <th>Päivämäärä</th>
 	</tr>
-	<% meteliResult.forEach(function(result){ %>
+	<% eventResult.forEach(function(result){ %>
 		<tr>
             <td><a href="<%= result.url %>" target="_blank"><%= result.name %></a></td>
-            <td><%= result.venue %></td>
+            <td><%= result.address %></td>
 			<td><%= result.date %></td>
 		</tr>
 	<% } ) %>

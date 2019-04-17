@@ -2,6 +2,7 @@ var express = require('express')
 var app = express()
 var fs = require('fs')
 var meteli = require('../public/json/meteli.json')
+var menoinfo = require('../public/json/menoinfo.json')
 //const JsSearch = require('js-search')
 var Fuse = require('fuse.js')
 
@@ -36,6 +37,8 @@ app.get('/', async function(req, res, next) {
 				}
 			})
             
+            var events = meteli.event.concat(menoinfo.event);
+            
             // Event search
             var options = {
               shouldSort: true,
@@ -46,16 +49,18 @@ app.get('/', async function(req, res, next) {
               minMatchCharLength: 1,
               keys: [
                 "name",
+                "address",
                 "venue",
                 "date",
-                "url"
+                "url",
+                "category"
               ]
             };
-            var fuse = new Fuse(meteli.event, options); // "list" is the item array
-            var meteliResult = fuse.search(req.query.keyword);
+            var fuse = new Fuse(events, options); // "list" is the item array
+            var eventResult = fuse.search(req.query.keyword);
             
             res.render('searchresults', {
-                meteliResult: meteliResult,
+                eventResult: eventResult,
 				results: response.json.results,
 				isLoggedIn: req.session.isLoggedIn,
 				profilePic: req.session.profilePic,

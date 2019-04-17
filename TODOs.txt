@@ -1,3 +1,4 @@
 - Ulkoasu
 - Loginin siirtäminen ulkoiseen tiedostoon ?
 - Appi kaatuu kun yritetään kirjautua ei-sähköpostilla ym (esim asd ja asd)
+- Pagination
