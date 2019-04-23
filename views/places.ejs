@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+
+<div class="container">
+   <header class="row justify-content-between align-items-center">
+      <div>
+         <h1 class="display-3">Paikat</h1>
+      </div>
+   </header>
+   <hr>
+
+
+   <div class="card-columns">
+      <% placeData.results.forEach(place => { %>
+      <div class="card thumbnail">
+         <a href="https://www.google.com/maps/search/?api=1&query=Google&query_place_id=<%= place.place_id %>"
+            <img src="<%= place.image %>" alt="">
+         </a>
+         <div class="card-body">
+            <a href="https://www.google.com/maps/search/?api=1&query=Google&query_place_id=<%= place.place_id %>" <h5 class="card-title"><%= place.name %></h5>
+               </a>
+            <p class="card-text"><%= place.formatted_address %></p>
+         </div>
+         <div class="card-footer">
+            <a href="https://www.google.com/maps/search/?api=1&query=Google&query_place_id=<%= place.place_id %>"
+               class="btn col-12 btn-sm btn-outline-dark">Näytä Paikka</a>
+         </div>
+      </div>
+      <% }) %>
+   </div>
+</div>
+
+<% include ./partials/footer %>

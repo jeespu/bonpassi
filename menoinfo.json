@@ -1,0 +1,858 @@
+{
+ "event": [
+  {
+   "name": "Askartelukerho",
+   "url": "http://www.menoinfo.fi/jyvaskyla/yhdistykset/askartelukerho/966682",
+   "category": "Yhdistystoiminta",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-13-Yhdistykset&f%5B1%5D=category%3Asubcategory-277-Yhdistystoiminta",
+   "date": "17.04.2019",
+   "location": "Kilpisenkatu 18"
+  },
+  {
+   "name": "Info Gloria",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/info-gloria/973807",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "17.04.2019",
+   "location": "Matarankatu 6 A 1"
+  },
+  {
+   "name": "Jyväskylän Ikääntyvien yliopiston yleisluento",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/jyvaskylan-ikaantyvien-yliopiston-yleisluento/938411",
+   "category": "Luennot, seminaarit, esitelmät",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-242-Luennot%2C%20seminaarit%2C%20esitelm%C3%A4t",
+   "date": "17.04.2019",
+   "location": "Seminaarinkatu 15"
+  },
+  {
+   "name": "Kaihi- ja ikänäköiltapäivä",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/kaihi-ja-ikanakoiltapaiva/972593",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "17.04.2019",
+   "location": "Kalevankatu 4"
+  },
+  {
+   "name": "Maksuton kaihikartoitus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/maksuton-kaihikartoitus/973764",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "17.04.2019",
+   "location": "Kalevankatu 4"
+  },
+  {
+   "name": "Kirjoittajakerho",
+   "url": "http://www.menoinfo.fi/jyvaskyla/yhdistykset/kirjoittajakerho/966696",
+   "category": "Yhdistystoiminta",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-13-Yhdistykset&f%5B1%5D=category%3Asubcategory-277-Yhdistystoiminta",
+   "date": "17.04.2019",
+   "location": "Kilpisenkatu 18"
+  },
+  {
+   "name": "Puutarhajuhlat",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/puutarhajuhlat/963788",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "17.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Draamaryhmä",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/draamaryhma/967753",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "17.04.2019",
+   "location": "Palokunnankatu 16"
+  },
+  {
+   "name": "Vedenneito",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/vedenneito/968543",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "17.04.2019–21.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Hiljaisuuden talo",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/hiljaisuuden-talo/972004",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "17.04.2019",
+   "location": "Vapaudenkatu 26"
+  },
+  {
+   "name": "BlaaBlaaBlaa",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/blaablaablaa/973812",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "17.04.2019",
+   "location": "Matarankatu 6 A 1"
+  },
+  {
+   "name": "Iltakahvila Menninkäinen",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/iltakahvila-menninkainen/973576",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "17.04.2019",
+   "location": "Nevakatu 2"
+  },
+  {
+   "name": "Runoilta",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/runoilta/973501",
+   "category": "Kulttuuri- ja taidetapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-244-Kulttuuri-%20ja%20taidetapahtumat",
+   "date": "17.04.2019",
+   "location": "Väkkärätie 3"
+  },
+  {
+   "name": "Kyrieleis! Hiljaisen viikon lauluja",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/kyrieleis-hiljaisen-viikon-lauluja/967078",
+   "category": "Muut musiikkitapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-204-Muut%20musiikkitapahtumat",
+   "date": "17.04.2019"
+  },
+  {
+   "name": "Tanssikurssi",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tanssi/tanssikurssi/974259",
+   "category": "Kansantanssi",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-5-Tanssi&f%5B1%5D=category%3Asubcategory-219-Kansantanssi",
+   "date": "17.04.2019",
+   "location": "Savonmäentie 9"
+  },
+  {
+   "name": "Tenebrae - kärsimyksen lauluja",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/tenebrae-karsimyksen-lauluja/964751",
+   "category": "Konsertti",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-200-Konsertti",
+   "date": "17.04.2019",
+   "location": "Keltinmäentie 10"
+  },
+  {
+   "name": "Tiellä Jerusalemiin -konsertti",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/tiella-jerusalemiin-konsertti/972032",
+   "category": "Konsertti",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-200-Konsertti",
+   "date": "17.04.2019",
+   "location": "Syöttäjänkatu 4"
+  },
+  {
+   "name": "Menkäämme nyt Jerusalemiin",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/menkaamme-nyt-jerusalemiin/972063",
+   "category": "Muut musiikkitapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-204-Muut%20musiikkitapahtumat",
+   "date": "17.04.2019",
+   "location": "Kirkkokatu 18"
+  },
+  {
+   "name": "Futsal-Liigaa Kampuksen Dynamo – Leijona Futsal",
+   "url": "http://www.menoinfo.fi/jyvaskyla/urheilu-ja-liikunta/futsal-liigaa-kampuksen-dynamo-leijona-futsal/972379",
+   "category": "Futsal",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-1-Urheilu%20ja%20liikunta&f%5B1%5D=category%3Asubcategory-297-Futsal",
+   "date": "17.04.2019–22.04.2019",
+   "location": "Kuntoportti 3"
+  },
+  {
+   "name": "Teatteriesitys",
+   "url": "http://www.menoinfo.fi/jyvaskyla/teatteri/teatteriesitys/973248",
+   "category": "Näytelmät",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-3-Teatteri&f%5B1%5D=category%3Asubcategory-210-N%C3%A4ytelm%C3%A4t",
+   "date": "17.04.2019",
+   "location": "Suvitie 7"
+  },
+  {
+   "name": "Nicky Rothen",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/nicky-rothen/959372",
+   "category": "Pop, rock",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-201-Pop%2C%20rock",
+   "date": "17.04.2019",
+   "location": "Kannaksenkatu 2"
+  },
+  {
+   "name": "A Star Is Born",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/star-born/963782",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "17.04.2019–21.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Captain Marvel",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/captain-marvel/963774",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–23.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Us",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/us/963789",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–22.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Uinu, uinu lemmikkini",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/uinu-uinu-lemmikkini/968545",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Green Book",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/green-book/963776",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–23.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Hellboy",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/hellboy/971427",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Shazam!",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/shazam/968542",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Kaikki tietävät",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/kaikki-tietavat/965720",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–23.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Britt-Marie kävi täällä",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/britt-marie-kavi-taalla/971429",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "After",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/after/971428",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Risto Räppääjä ja pullistelija",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/risto-rappaaja-ja-pullistelija/963778",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–22.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Kulttuuria Kyliltä Keski-Suomen Päivän retki 18.4",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/kulttuuria-kylilta-keski-suomen-paivan-retki-184/971841",
+   "category": "Kulttuuri- ja taidetapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-244-Kulttuuri-%20ja%20taidetapahtumat",
+   "date": "18.04.2019",
+   "location": "Harjukatu"
+  },
+  {
+   "name": "Kulttuuria kylillä -kierros Sumiaisiin ja Konginkankaalle",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/kulttuuria-kylilla-kierros-sumiaisiin-ja-konginkankaalle/969822",
+   "category": "Opastetut kierrokset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-246-Opastetut%20kierrokset",
+   "date": "18.04.2019",
+   "location": "Harjukatu"
+  },
+  {
+   "name": "Kolme naista",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/kolme-naista/968544",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–22.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Miehiä ja poikia",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/miehia-ja-poikia/965719",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Ihmeiden puisto",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/ihmeiden-puisto/963798",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Dumbo",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/dumbo/965718",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Luontosinfonia",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/luontosinfonia/963787",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "16.04.2019–22.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Lunch@Gloria",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/lunchgloria/973922",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "18.04.2019",
+   "location": "Matarankatu 6 A 1"
+  },
+  {
+   "name": "Senioriklubi",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/senioriklubi/974399",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "18.04.2019–02.05.2019",
+   "location": "Matarankatu 6 A 1"
+  },
+  {
+   "name": "Kruuvaus Duo",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/kruuvaus-duo/974353",
+   "category": "Konsertti",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-200-Konsertti",
+   "date": "18.04.2019",
+   "location": "Vapaudenkatu 48-50"
+  },
+  {
+   "name": "Torstaikerho",
+   "url": "http://www.menoinfo.fi/jyvaskyla/seniorit/torstaikerho/973865",
+   "category": "Seniorit",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-14-Seniorit&f%5B1%5D=category%3Asubcategory-298-Seniorit",
+   "date": "18.04.2019"
+  },
+  {
+   "name": "Info Gloria",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/info-gloria/974401",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "18.04.2019",
+   "location": "Matarankatu 6 A 1"
+  },
+  {
+   "name": "Ikis-kuoron kevätkonserttti",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/ikis-kuoron-kevatkonserttti/963246",
+   "category": "Konsertti",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-200-Konsertti",
+   "date": "18.04.2019",
+   "location": "Paperitehtaankatu 1"
+  },
+  {
+   "name": "Digi-apu",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/digi-apu/973447",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "16.04.2019–18.04.2019",
+   "location": "Matarankatu 6"
+  },
+  {
+   "name": "Glorian ABC",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/glorian-abc/972736",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "16.04.2019–18.04.2019",
+   "location": "Matarankatu 6 A 1"
+  },
+  {
+   "name": "Sirkka-Liisa Meltauksen taidenäyttely",
+   "url": "http://www.menoinfo.fi/jyvaskyla/nayttelyt/sirkka-liisa-meltauksen-taidenayttely/971669",
+   "category": "Taidenäyttelyt",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-6-N%C3%A4yttelyt&f%5B1%5D=category%3Asubcategory-224-Taiden%C3%A4yttelyt",
+   "date": "16.04.2019–10.05.2019",
+   "location": "Nevakatu 1"
+  },
+  {
+   "name": "Kits Kiira metsään",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/kits-kiira-metsaan/973735",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "18.04.2019",
+   "location": "Martinpolku 10"
+  },
+  {
+   "name": "Sataman rukousilta ja ehtoollinen",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/sataman-rukousilta-ja-ehtoollinen/965979",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "18.04.2019",
+   "location": "Polttolinja 35"
+  },
+  {
+   "name": "Kiirastorstain messu",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/kiirastorstain-messu/972009",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "18.04.2019"
+  },
+  {
+   "name": "Lavatanssikurssi, Hitaat jatkotaso",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tanssi/lavatanssikurssi-hitaat-jatkotaso/935114",
+   "category": "Muut tanssitapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-5-Tanssi&f%5B1%5D=category%3Asubcategory-216-Muut%20tanssitapahtumat",
+   "date": "18.04.2019",
+   "location": "Savonmäentie 9"
+  },
+  {
+   "name": "Red Joan",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/red-joan/971430",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "18.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Autiomaa & Slack Bird",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/autiomaa-slack-bird/962272",
+   "category": "Muut musiikkitapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-204-Muut%20musiikkitapahtumat",
+   "date": "18.04.2019",
+   "location": "Seminaarinkatu 32"
+  },
+  {
+   "name": "Kiirastorstain yhteysateria",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/kiirastorstain-yhteysateria/968841",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "18.04.2019",
+   "location": "Savonmäentie 14"
+  },
+  {
+   "name": "Kiirastorstain messu",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/kiirastorstain-messu/971954",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "18.04.2019",
+   "location": "Lohikoskentie 2"
+  },
+  {
+   "name": "Kiirastorstain messu",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/kiirastorstain-messu/971971",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "18.04.2019",
+   "location": "Keltinmäentie 10"
+  },
+  {
+   "name": "Kiirastorstain messu",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/kiirastorstain-messu/971993",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "18.04.2019",
+   "location": "Kirkkopuisto"
+  },
+  {
+   "name": "Kiirastorstain messu",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/kiirastorstain-messu/972022",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "18.04.2019",
+   "location": "Syöttäjänkatu 4"
+  },
+  {
+   "name": "Kiirastorstain messu",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/kiirastorstain-messu/972037",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "18.04.2019",
+   "location": "Ukonniementie 2"
+  },
+  {
+   "name": "Kiirastorstain messu",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/kiirastorstain-messu/972044",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "18.04.2019",
+   "location": "Rovastintie 8"
+  },
+  {
+   "name": "Kiirastorstain messu",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/kiirastorstain-messu/972057",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "18.04.2019",
+   "location": "Kirkkokatu 18"
+  },
+  {
+   "name": "Kiirastorstain messu",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/kiirastorstain-messu/972072",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "18.04.2019",
+   "location": "Kirkkotie 11"
+  },
+  {
+   "name": "Kiirastorstain messu",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/kiirastorstain-messu/973266",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "18.04.2019",
+   "location": "Kansakoulukatu 5"
+  },
+  {
+   "name": "Itkevän naisen kirous",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/itkevan-naisen-kirous/971431",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "18.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Sähkö",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/sahko/970092",
+   "category": "Kulttuuri- ja taidetapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-244-Kulttuuri-%20ja%20taidetapahtumat",
+   "date": "18.04.2019"
+  },
+  {
+   "name": "Bohemian Rhapsody",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/bohemian-rhapsody/963781",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "18.04.2019–23.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Hausmylly",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/hausmylly/966258",
+   "category": "Pop, rock",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-201-Pop%2C%20rock",
+   "date": "18.04.2019",
+   "location": "Nevakatu 1"
+  },
+  {
+   "name": "Sarinko & Ossian Smith",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/sarinko-ossian-smith/970710",
+   "category": "Pop, rock",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-201-Pop%2C%20rock",
+   "date": "18.04.2019",
+   "location": "Kannaksenkatu 2"
+  },
+  {
+   "name": "Hiljaisen viikon iltajumalanpalvelus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/hiljaisen-viikon-iltajumalanpalvelus/971991",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "15.04.2019–17.04.2019",
+   "location": "Kirkkopuisto"
+  },
+  {
+   "name": "Kohtalona murha",
+   "url": "http://www.menoinfo.fi/jyvaskyla/teatteri/kohtalona-murha/971755",
+   "category": "Näytelmät",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-3-Teatteri&f%5B1%5D=category%3Asubcategory-210-N%C3%A4ytelm%C3%A4t",
+   "date": "15.04.2019–20.04.2019"
+  },
+  {
+   "name": "Runousaamiainen",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/runousaamiainen/962274",
+   "category": "Kulttuuri- ja taidetapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-244-Kulttuuri-%20ja%20taidetapahtumat",
+   "date": "19.04.2019",
+   "location": "Seminaarinkatu 32"
+  },
+  {
+   "name": "Pitkäperjantain sanajumalanpalvelus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/pitkaperjantain-sanajumalanpalvelus/971956",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019",
+   "location": "Lohikoskentie 2"
+  },
+  {
+   "name": "Pitkäperjantain sanajumalanpalvelus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/pitkaperjantain-sanajumalanpalvelus/971972",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019",
+   "location": "Keltinmäentie 10"
+  },
+  {
+   "name": "Pitkäperjantain sanajumalanpalvelus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/pitkaperjantain-sanajumalanpalvelus/971994",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019",
+   "location": "Kirkkopuisto"
+  },
+  {
+   "name": "Pitkäperjantain sanajumalanpalvelus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/pitkaperjantain-sanajumalanpalvelus/972010",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019"
+  },
+  {
+   "name": "Pitkäperjantain sanajumalanpalvelus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/pitkaperjantain-sanajumalanpalvelus/972045",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019",
+   "location": "Rovastintie 8"
+  },
+  {
+   "name": "Pitkäperjantain sanajumalanpalvelus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/pitkaperjantain-sanajumalanpalvelus/972052",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019",
+   "location": "Saarnatie 1"
+  },
+  {
+   "name": "Pitkäperjantain sanajumalanpalvelus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/pitkaperjantain-sanajumalanpalvelus/972058",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019",
+   "location": "Kirkkokatu 18"
+  },
+  {
+   "name": "Pitkäperjantain sanajumalanpalvelus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/pitkaperjantain-sanajumalanpalvelus/972075",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019",
+   "location": "Kirkkotie 11"
+  },
+  {
+   "name": "Runousaamiainen",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/runousaamiainen/970094",
+   "category": "Kulttuuri- ja taidetapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-244-Kulttuuri-%20ja%20taidetapahtumat",
+   "date": "19.04.2019",
+   "location": "Seminaarinkatu 32"
+  },
+  {
+   "name": "Pitkäperjantain sanajumalanpalvelus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/pitkaperjantain-sanajumalanpalvelus/972023",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019",
+   "location": "Syöttäjänkatu 4"
+  },
+  {
+   "name": "Räyhä-Ralf valloittaa Internetin",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/rayha-ralf-valloittaa-internetin/963791",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "19.04.2019–20.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Minisankarit 2 - matkalla maailman ääriin",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/minisankarit-2-matkalla-maailman-aariin/968547",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "19.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Taas maalataan Pisanka-munia",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/taas-maalataan-pisanka-munia/973193",
+   "category": "Kulttuuri- ja taidetapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-244-Kulttuuri-%20ja%20taidetapahtumat",
+   "date": "19.04.2019",
+   "location": "Korpilahdentie 10"
+  },
+  {
+   "name": "Asterix ja taikajuoman salaisuus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/asterix-ja-taikajuoman-salaisuus/974137",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "19.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Keittolounas",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/keittolounas/971963",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "15.04.2019–29.04.2019",
+   "location": "Nevakatu 1"
+  },
+  {
+   "name": "Info Gloria",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/info-gloria/972733",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "15.04.2019–18.04.2019",
+   "location": "Matarankatu 6 A 1"
+  },
+  {
+   "name": "Pitkäperjantain hartaus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/pitkaperjantain-hartaus/971965",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019",
+   "location": "Pihkatie 4"
+  },
+  {
+   "name": "Jeesuksen kuolinhetken hartaus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/jeesuksen-kuolinhetken-hartaus/972024",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019",
+   "location": "Syöttäjänkatu 4"
+  },
+  {
+   "name": "Jeesuksen kuolinhetken hartaus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/jeesuksen-kuolinhetken-hartaus/972038",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019",
+   "location": "Ukonniementie 2"
+  },
+  {
+   "name": "Pitkäperjantain sanajumalanpalvelus",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/pitkaperjantain-sanajumalanpalvelus/972016",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "19.04.2019",
+   "location": "Isännäntie 4"
+  },
+  {
+   "name": "Pääsiäisen Cosplaytanssiaiset",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/paasiaisen-cosplaytanssiaiset/956785",
+   "category": "Viihdetanssit, lavatanssit",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-245-Viihdetanssit%2C%20lavatanssit",
+   "date": "19.04.2019",
+   "location": "Veturitallinkatu 6"
+  },
+  {
+   "name": "Rivien välissä",
+   "url": "http://www.menoinfo.fi/jyvaskyla/elokuvat/rivien-valissa/974138",
+   "category": "Elokuvat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-4-Elokuvat&f%5B1%5D=category%3Asubcategory-212-Elokuvat",
+   "date": "19.04.2019–25.04.2019",
+   "location": "Kauppakatu 29-31"
+  },
+  {
+   "name": "Jyväskylä Sinfonia: Triduum Paschale – Pääsiäisoratorio",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/jyvaskyla-sinfonia-triduum-paschale-paasiaisoratorio/919484",
+   "category": "Klassinen",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-205-Klassinen",
+   "date": "19.04.2019"
+  },
+  {
+   "name": "Good Jazz Friday",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/good-jazz-friday/971900",
+   "category": "Jazz, blues",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-197-Jazz%2C%20blues",
+   "date": "19.04.2019",
+   "location": "Puistokatu 2 – 4"
+  },
+  {
+   "name": "Pitkäperjantai Live: Mikko Harju",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/pitkaperjantai-live-mikko-harju/966806",
+   "category": "Konsertti",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-200-Konsertti",
+   "date": "19.04.2019",
+   "location": "Kauppakatu 30"
+  },
+  {
+   "name": "Pekko Käppi & K.H.H.L",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/pekko-kappi-khhl/972668",
+   "category": "Pop, rock",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-201-Pop%2C%20rock",
+   "date": "19.04.2019",
+   "location": "Kauppakatu 6"
+  },
+  {
+   "name": "Black souls matter VII",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/black-souls-matter-vii/973058",
+   "category": "Metalli, heavy",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-303-Metalli%2C%20heavy",
+   "date": "19.04.2019"
+  },
+  {
+   "name": "Kuplettikopla",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/kuplettikopla/974255",
+   "category": "Pop, rock",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-201-Pop%2C%20rock",
+   "date": "19.04.2019",
+   "location": "Yrjönkatu 14"
+  },
+  {
+   "name": "Ninety",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/ninety/959373",
+   "category": "Pop, rock",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-201-Pop%2C%20rock",
+   "date": "19.04.2019",
+   "location": "Kannaksenkatu 2"
+  },
+  {
+   "name": "Let\"s Eppelin & U Pasanen Band yhteiskeikalla",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/lets-eppelin-u-pasanen-band-yhteiskeikalla/973173",
+   "category": "Pop, rock",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-201-Pop%2C%20rock",
+   "date": "19.04.2019",
+   "location": "Asemakatu 7"
+  },
+  {
+   "name": "Telefunkkens",
+   "url": "http://www.menoinfo.fi/jyvaskyla/musiikki/telefunkkens/970042",
+   "category": "Pop, rock",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-2-Musiikki&f%5B1%5D=category%3Asubcategory-201-Pop%2C%20rock",
+   "date": "19.04.2019",
+   "location": "Runkotie 2"
+  },
+  {
+   "name": "Tanssin huumaa ja jumppaa",
+   "url": "http://www.menoinfo.fi/jyvaskyla/urheilu-ja-liikunta/tanssin-huumaa-ja-jumppaa/972220",
+   "category": "Kuntoliikunta",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-1-Urheilu%20ja%20liikunta&f%5B1%5D=category%3Asubcategory-187-Kuntoliikunta",
+   "date": "14.04.2019–28.04.2019",
+   "location": "Kyllöläntie 16"
+  },
+  {
+   "name": "Naissaaren pääsiäisrieha",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/naissaaren-paasiaisrieha/969215",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "20.04.2019"
+  },
+  {
+   "name": "Minna Bakes Pääsiäisbrunssi",
+   "url": "http://www.menoinfo.fi/jyvaskyla/tapahtumat/minna-bakes-paasiaisbrunssi/972643",
+   "category": "Muut tapahtumat",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-9-Tapahtumat&f%5B1%5D=category%3Asubcategory-237-Muut%20tapahtumat",
+   "date": "20.04.2019",
+   "location": "Ihantolantie 5"
+  },
+  {
+   "name": "Vanhanaikainen tupakokous",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/vanhanaikainen-tupakokous/972674",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "20.04.2019",
+   "location": "Marjoniementie 10"
+  },
+  {
+   "name": "Sataman ilta",
+   "url": "http://www.menoinfo.fi/jyvaskyla/hengelliset/sataman-ilta/965970",
+   "category": "Hengelliset",
+   "category_url": "http://www.menoinfo.fi/events?f%5B0%5D=category%3Acategory-15-Hengelliset&f%5B1%5D=category%3Asubcategory-241-Hengelliset",
+   "date": "20.04.2019"
+  }
+ ]
+}

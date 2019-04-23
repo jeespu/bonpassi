@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+<div class="container">
+   <div class="row justify-content-center">
+      <div class="col-md-9">
+         <a class="text-dark" href="/events"> Tapahtumat</a>
+         <i class="fas fa-chevron-right"></i>
+         <span class="text-black-50"><%= event.name %></span>
+         <hr>
+         <div class="card">
+            <img class="card-img-top" src="<%= event.image %>" alt="">
+            <div class="card-body">
+               <h4 class="card-title"><a href="<%= event.url %>"><%= event.name %></a></h4>
+               <strong>Aika ja Paikka</strong>
+               <p class="card-text"><%= event.date %> @ <%= event.location %>
+                  <a class="d-block" href="<%= event.url %>">Tapahtuman verkkosivu</a>
+               </p>
+
+               <p class="card-text"><%= event.description %></p>
+               <strong>Liput</strong>
+               <p class="card-text"><%= event.tickets %></p>
+               <p>
+                  <em>Submitted By <%= event.author.username %></em>
+               </p>
+               <% if(event.author.id && currentUser && event.author.id.equals(currentUser._id)) { %>
+               <a class="btn btn-warning text-white" href="/events/<%= event._id %>/edit">Muokkaa</a>
+               <form class="delete-form" action="/events/<%= event._id %>/?_method=DELETE" method="post">
+                  <button class="btn btn-danger">Poista</button>
+               </form>
+               <% } %>
+               <a href="/user/<%= event._id %>">Lisää Suosikkeihin <i class="fas fa-heart"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+
+<div class="container">
+
+   <div class="row justify-content-center">
+      <div class="col-md-6">
+         <h1 class="display-5">Lisää Tapahtuma</h1>
+         <a href="/events" class="text-secondary"><i class="fas fa-chevron-left"></i> Takaisin</a>
+         <hr>
+         <form action="/events" method="POST">
+            <div class="form-group">
+               <input class="form-control" type="text" name="name" placeholder="Nimi">
+            </div>
+            <div class="form-group">
+               <input class="form-control" type="text" name="image" placeholder="Kuva (URL)">
+            </div>
+            <div class="form-group">
+               <input class="form-control" type="text" name="date" placeholder="Aika ja Päivämäärä">
+            </div>
+            <div class="form-group">
+               <input class="form-control" type="text" name="location" placeholder="Paikka">
+            </div>
+            <div class="form-group">
+               <input class="form-control" type="text" name="description" placeholder="Kuvaus">
+            </div>
+            <div class="form-group">
+               <input class="form-control" type="text" name="tickets" placeholder="Liput">
+            </div>
+            <div class="form-group d-flex justify-content-between">
+               <a href="/events" class="btn btn-md btn-danger">Peruuta</a>
+               <button class="btn btn-md btn-success">Lisää Tapahtuma</button>
+            </div>
+            
+         </form>
+      </div>
+   </div>
+</div>
+
+<% include ../partials/footer %>

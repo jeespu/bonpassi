@@ -1,54 +1,18 @@
-<!--
-including header content which is common for all pages
--->
-<%- include ../layouts/header.ejs %>
+<% include ../partials/header %>
 
-<% if (messages.error) { %>
-	<p style="color:red"><%- messages.error %></p>
-<% } %>
+<div class="container">
+   <% user.forEach(user => { %>
+   <div id="profilePic"><img src="<%= user.profilePic %>"></div>
+   <div id="profileInfo">
+      <h2 class="display-3"><%= user.username %></h2>
+      <p><%= user.firstName %></p>
+      <p><%= user.lastName %></p>
+      <p><%= user.email %></p>
+   </div>
+   <form class="delete-form" action="/user/<%= user._id %>/?_method=DELETE" method="post">
+      <button class="btn btn-danger">Poista Tili</button>
+   </form>
+   <% }) %>
+</div>
 
-<% if (messages.success) { %>
-	<p style="color:green"><%- messages.success %></p>
-<% } %>	
-
-<table width="80%" border=0 class="mx-auto" style="position: absolute;">
-
-	<tr style='text-align:left; background-color:#CCC'>
-		<th>First name</th>
-		<th>Last name</th>
-		<th>Email</th>
-		<th>Action</th>
-	</tr>
-	
-	<!--
-		Using FOREACH LOOP for the users array
-		
-		myArray.forEach(function(el, index) {
-			// el - current element, i - index
-		});
-	-->
-	<% if (data) { %>
-	<% data.forEach(function(user){ %>
-		<tr>
-			<td><%= user.firstname %></td>
-			<td><%= user.lastname %></td>
-			<td><%= user.email %></td>
-			<td>
-				<div style="float:left">
-					<a href='/users/edit/<%= user.id %>'>Edit</a> &nbsp;							
-					<form method="post" action="/users/delete/<%= user.id %>" style="float:right">
-						<input type="submit" name="delete" value='Delete' onClick="return confirm('Are you sure you want to delete?')" />
-						<input type="hidden" name="_method" value="DELETE" />
-					</form>
-				</div>
-			</td>
-		</tr>
-	<% }) %>
-	<% } %>
-
-</table>
-
-<!--
-including footer content which is common for all pages
--->
-<%- include ../layouts/footer.ejs %>
+<% include ../partials/footer %>

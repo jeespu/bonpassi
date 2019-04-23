@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+
+<div class="container bg-light">
+   <header class="row justify-content-between align-items-center">
+      <div>
+         <h1 class="display-3">Tapahtumat</h1>
+      </div>
+      <div>
+         <a class="btn btn-success btn-lg" href="/events/new">
+            <i class="fas fa-plus"></i> Lisää Tapahtuma
+         </a>
+      </div>
+   </header>
+   <hr>
+
+   <div class="card-columns">
+      <% events.forEach(event => { %>
+      <div class="card thumbnail">
+         <a href="/events/<%= event._id %>">
+            <img src="<%= event.image %>" alt="">
+         </a>
+         <div class="card-body">
+            <a href="/events/<%= event._id %>" <h5 class="card-title"><%= event.name %></h5></a>
+            <p class="card-text"><%= event.date %> @ <%= event.location %></p>
+            <p class="card-text"><%= event.tickets %></p>
+         </div>
+         <div class="card-footer">
+            <a href="/events/<%= event._id %>" class="btn col-12 btn-sm btn-outline-dark">Avaa Tapahtuma</a>
+         </div>
+      </div>
+      <% }) %>
+   </div>
+
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+<div class="container">
+   <div id="profilePic"><img src="<%= currentUser.profilePic %>"></div>
+   <div id="profileInfo">
+      <h2 class="display-3"><%= currentUser.username %></h2>
+      <p><%= currentUser.firstName %></p>
+      <p><%= currentUser.lastName %></p>
+      <p><%= currentUser.email %></p>
+   </div>
+   <!-- <a class="btn btn-warning text-white" href="/user/<%= currentUser._id %>/edit">Muokkaa Tiliä</a> -->
+   <form class="delete-form" action="/user/<%= currentUser._id %>/?_method=DELETE" method="post">
+      <button class="btn btn-danger">Poista Tili</button>
+   </form>
+   <hr>
+   <div>
+      <h3>Suosikit</h3>
+      <div class="card-columns">
+         <% eventData.forEach(event => { %>
+         <div class="card thumbnail">
+            <a href="/events/<%= event._id %>">
+               <img src="<%= event.image %>" alt="">
+            </a>
+            <div class="card-body">
+               <a href="/events/<%= event._id %>" <h5 class="card-title"><%= event.name %></h5></a>
+               <p class="card-text"><%= event.date %> @ <%= event.location %></p>
+               <p class="card-text"><%= event.tickets %></p>
+            </div>
+            <div class="card-footer">
+               <a href="/events/<%= event._id %>" class="btn col-12 btn-sm btn-outline-dark">Avaa Tapahtuma</a>
+            </div>
+         </div>
+         <% }) %>
+      </div>
+   </div>
+</div>
+
+<% include ../partials/footer %>

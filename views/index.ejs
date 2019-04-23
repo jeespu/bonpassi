@@ -1,92 +1,204 @@
-<!--
-including header content which is common for all pages
--->
-<%- include layouts/header.ejs %>
+<!DOCTYPE html>
+<html>
 
-<div class="row">
-   <h3>Satunnaisotos tapahtumista</h3>
-   <div class="karuselli col-12">
-      <div>
-         <img height="160px" width="240px" src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>" />
-      </div>
-      <div>
-         <img height="160px" width="240px" src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>" />
-      </div>
-      <div>
-         <img height="160px" width="240px" src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>" />
-      </div>
-      <div>
-         <img height="160px" width="240px" src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>" />
-      </div>
-      <div>
-         <img height="160px" width="240px" src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>" />
-      </div>
-      <div>
-         <img height="160px" width="240px" src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>" />
-      </div>
-      <div>
-         <img height="160px" width="240px" src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>" />
-      </div>
-      <div>
-         <img height="160px" width="240px" src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>" />
-      </div>
-      <div>
-         <img height="160px" width="240px" src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>" />
-      </div>
-      <div>
-         <img height="160px" width="240px" src="<%= meteli[Math.floor((Math.random() * meteli.length))].image %>" />
-      </div>
-   </div>
-</div>
+<head>
+   <!-- Bootstrap 4 -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+   <!-- CSS -->
+   <link rel="stylesheet" href="/stylesheets/main.css">
+   <link rel="stylesheet" type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
 
-<div class="row">
-   <div class="col-sm"> <h3>Uutiset</h3>
-       <div id="news">
-      <% for (var i = 0; i < news.length; i++) { %>
-      <div class="headlinediv"><a style="margin: 0; padding: 0;" href="<%= news[i].headline_url %>"
-            target="_blank"><%= news[i].headline %></a><br><%= news[i].media %></div>
+   <title>Bonpassi</title>
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-md navbar-dark d-flex ">
+      <a class="navbar-brand display-1" href="/"><i class="fas fa-compass fa-1x align-items-center"></i> BONPASSI</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-items"
+         aria-controls="menu-items" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-items">
+         <ul class="navbar-nav ml-auto align-items-center">
+            <!-- <li class="navbar-item ml-auto">
+               <form action="/search" method="POST">
+                  <div class="d-flex align-items-center">
+                     <input class="form-control" type="text" id="search-nav" placeholder="Hae..." name="query" required>
+                     <button type="submit" class="nav-link bg-transparent border-0"><i
+                           class="fas fa-search"></i></button>
+                  </div>
+               </form>
+            </li> -->
+            <% if(currentUser && currentUser.isAdmin) { %>
+            <li class="nav-item ml-auto"><a class="nav-link" href="/users">Selaa Käyttäjiä</a>
+            </li>
+            <% } %>
+            <li class="nav-item ml-auto"><a class="nav-link" href="/events">Selaa Tapahtumia</a>
+            </li>
+            <!-- Käyttäjä ei kirjautunut -->
+            <% if(!currentUser) { %>
+            <li class="nav-item ml-auto"><a class="nav-link" data-toggle="modal" data-target="#loginModal"
+                  href="#login">Kirjaudu</a></li>
+            <li class="nav-item ml-auto"><a class="nav-link" href="#register" data-toggle="modal"
+                  data-target="#registerModal">Rekisteröidy</a></li>
+            <% } else { %>
+            <li class="nav-item ml-auto"><a class="nav-link" href="/user">Kirjauduttu käyttäjänä <%= currentUser.username %></a>
+            </li>
+            <li class="nav-item ml-auto"><a class="nav-link" href="/logout">Kirjaudu Ulos</a></li>
+            <% } %>
+         </ul>
+      </div>
+   </nav>
+
+   <!-- Ilmoitukset -->
+   <div id="notifications" class="w-100 text-center position-absolute">
+      <% if(error && error.length > 0 ){ %>
+      <div class="alert alert-dark alert-dismissible fade show" role="alert">
+         <%= error %>
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
       <% } %>
-           </div>
+      <% if(success && success.length > 0 ){ %>
+      <div class="alert alert-dark alert-dismissible fade show" role="alert">
+         <%= success %>
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <% } %>
    </div>
-    <div class="col-sm">Contenttia</div>
-    <div class="col-sm"></div>
-</div>
 
-<!--
-including footer content which is common for all pages
--->
-<%- include layouts/footer.ejs %>
+   <!-- Kirjautumisikkuna -->
+   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Kirjaudu Sisään</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <form action="/login" method="post">
+                  <div class="form-group">
+                     <label for="username">Käyttäjänimi</label>
+                     <input type="text" class="form-control" name="username" placeholder="Käyttäjänimi" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="password">Salasana:</label>
+                     <input type="password" class="form-control" name="password" placeholder="Salasana" required>
+                  </div>
+                  <button type="submit" class="btn btn-md btn-success col-12">Kirjaudu Sisään</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
 
+   <!-- Rekisteröityminen -->
+   <div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Rekisteröidy</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <form action="/register" method="post">
+                  <div class="form-group">
+                     <label for="firstName">Etunimi</label>
+                     <input type="text" class="form-control" name="firstName" placeholder="Etunimi" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="lastName">Sukunimi</label>
+                     <input type="text" class="form-control" name="lastName" placeholder="Sukunimi" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="email">Sähköposti</label>
+                     <input type="text" class="form-control" name="email" placeholder="Sähköposti" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="username">Käyttäjänimi</label>
+                     <input type="text" class="form-control" name="username" placeholder="Käyttäjänimi" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="password">Salasana:</label>
+                     <input type="password" class="form-control" name="password" placeholder="Salasana" required>
+                  </div>
+                  <button type="submit" class="btn btn-md btn-success col-12">Rekisteröidy</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
 
-<script>
+   <!-- Taustavideo-->
+   <div id="video-container">
+      <video autoplay loop muted>
+         <source src="video.m4v" type="video/mp4">
+         Sorry, your browser doesn't support embedded videos.
+      </video>
+   </div>
 
-   $(document).ready(function () {
-      $('.karuselli').slick({
-         centerMode: true,
-         dots: true,
-         centerPadding: '160px',
-         slidesToShow: 3,
-         responsive: [
-            {
-               breakpoint: 768,
-               settings: {
-                  arrows: false,
-                  centerMode: true,
-                  centerPadding: '140px',
-                  slidesToShow: 5
+   <!-- Haku -->
+   <div class="container">
+      <div id="landing-header">
+         <h1 class="text-center text-light mb-4">Etsi tapahtumia ja paikkoja Bonpassin avulla</h1>
+         <form action="/search" method="POST">
+            <div class="form-group col-md-6 offset-md-3">
+               <input type="text" class="form-control p-4" id="search-header" placeholder="Hae..." name="query"
+                  required>
+            </div>
+            <button type="submit" class="btn btn-outline-light col-3"><i class="fas fa-search"></i> Hae
+            </button>
+         </form>
+         <!-- <a href="/places" class="btn btn-outline-light btn-lg">Paikat</a> -->
+      </div>
+   </div>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+   <script>
+      window.addEventListener("load", function () {
+         window.cookieconsent.initialise({
+            "palette": {
+               "popup": {
+                  "background": "#3c404d",
+                  "text": "#d6d6d6"
+               },
+               "button": {
+                  "background": "#8bed4f"
                }
             },
-            {
-               breakpoint: 480,
-               settings: {
-                  arrows: false,
-                  centerMode: true,
-                  centerPadding: '140px',
-                  slidesToShow: 1
-               }
+            "theme": "classic",
+            "content": {
+               "message": "Tämä sivusto käyttää evästeitä parhaan toimivuuden takaamiseksi.",
+               "dismiss": "Selvä!",
+               "link": "Lue lisää"
             }
-         ]
+         })
       });
-   });
+      window.setTimeout(() => {
+         $('.alert').alert('close')
+      }, 4000);
+   </script>
+</body>
 
-</script>
+</html>

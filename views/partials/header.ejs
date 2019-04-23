@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!-- Bootstrap 4 -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+   <!-- CSS -->
+   <link rel="stylesheet" href="/stylesheets/main.css">
+   <title>Bonpassi</title>
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark d-flex align-items-center fixed-top">
+      <a class="navbar-brand display-1" href="/"><i class="fas fa-compass fa-1x align-items-center"></i> BONPASSI</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-items"
+         aria-controls="menu-items" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-items">
+         <ul class="navbar-nav ml-auto align-items-center">
+            <li class="navbar-item ml-auto">
+               <form action="/search" method="POST">
+                  <div class="d-flex align-items-center">
+                     <input class="form-control form-control-sm" type="text" id="search-nav" placeholder="Hae..."
+                        name="query" required>
+                     <button type="submit" class="nav-link bg-transparent border-0 nav-search-btn"><i
+                           class="fas fa-search"></i></button>
+                  </div>
+               </form>
+            </li>
+            <% if(currentUser && currentUser.isAdmin) { %>
+            <li class="nav-item ml-auto"><a class="nav-link" href="/users">Selaa Käyttäjiä</a>
+            </li>
+            <% } %>
+            </li>
+            <li class="nav-item ml-auto"><a class="nav-link" href="/events">Selaa Tapahtumia</a>
+            </li>
+            <!-- Käyttäjä ei kirjautunut -->
+            <% if(!currentUser) { %>
+            <li class="nav-item ml-auto">
+               <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#login">Login</a>
+            </li>
+            <li class="nav-item ml-auto"><a class="nav-link" href="#register" data-toggle="modal"
+                  data-target="#registerModal">Sign Up</a></li>
+            <% } else { %>
+            <li class="nav-item ml-auto"><a class="nav-link" href="/user">Kirjauduttu käyttäjänä <%= currentUser.username %></a>
+            </li>
+            <li class="nav-item ml-auto"><a class="nav-link" href="/logout">Logout</a></li>
+            <% } %>
+         </ul>
+      </div>
+   </nav>
+
+   <!-- Ilmoitukset -->
+   <div id="notifications" class="w-100 text-center position-fixed my-5">
+      <% if(error && error.length > 0 ){ %>
+      <div class="alert alert-dark alert-dismissible fade show" role="alert">
+         <%= error %>
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <% } %>
+      <% if(success && success.length > 0 ){ %>
+      <div class="alert alert-dark alert-dismissible fade show" role="alert">
+         <%= success %>
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+         </button>
+      </div>
+      <% } %>
+   </div>
+
+   <!-- Kirjautumisikkuna -->
+   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Kirjaudu Sisään</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <form action="/login" method="post">
+                  <div class="form-group">
+                     <label for="username">Käyttäjänimi</label>
+                     <input type="text" class="form-control" name="username" placeholder="Käyttäjänimi" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="password">Salasana:</label>
+                     <input type="password" class="form-control" name="password" placeholder="Salasana" required>
+                  </div>
+                  <button type="submit" class="btn btn-md btn-success col-12">Kirjaudu Sisään</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Rekisteröityminen -->
+   <div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title">Rekisteröidy</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <form action="/register" method="post">
+                  <div class="form-group">
+                     <label for="firstName">Etunimi</label>
+                     <input type="text" class="form-control" name="firstName" placeholder="Etunimi" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="lastName">Sukunimi</label>
+                     <input type="text" class="form-control" name="lastName" placeholder="Sukunimi" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="email">Sähköposti</label>
+                     <input type="text" class="form-control" name="email" placeholder="Sähköposti" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="username">Käyttäjänimi</label>
+                     <input type="text" class="form-control" name="username" placeholder="Käyttäjänimi" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="password">Salasana:</label>
+                     <input type="password" class="form-control" name="password" placeholder="Salasana" required>
+                  </div>
+                  <button type="submit" class="btn btn-md btn-success col-12">Rekisteröidy</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="mb-5 py-5"></div>

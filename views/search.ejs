@@ -1,0 +1,61 @@
+<% include ./partials/header %>
+
+<div class="container">
+   <h1 class="display-3">Hakutulokset '<%= query %>'</h1>
+   <hr>
+   
+   <div class="row">
+      <div class="col-sm-6 my-5">
+         <h1><a class="text-dark" href="/events">Tapahtumat</a></h1>
+         <hr>
+         <% if(eventData.length < 1) { %>
+         <h5 class="mt-0 mb-1">Ei hakutuloksia</h5>
+         <% } %>
+         <ul class="list-unstyled">
+            <% eventData.forEach(event => { %>
+            <li class="media">
+               <!-- <img class="mr-3 d-block" src="<%= event.image %>" alt=""> -->
+               <div class="media-body">
+                  <h5 class="mt-0 mb-1">
+                     <a href="events/<%= event._id %>"><%= event.name %></a>
+                  </h5>
+                  <p><%= event.date %></p>
+                  <p><%= event.location %></p>
+                  <p><%= event.description %></p>
+                  <p><%= event.tickets %></p>
+                  </a>
+               </div>
+            </li>
+            <hr>
+            <% }) %>
+         </ul>
+      </div>
+
+
+      <div class="col-sm-6 my-5">
+         <h1><a class="text-dark" href="/places">Paikat</a></h1>
+         <hr>
+         <% if(placeData.results.length < 1) { %>
+         <h5 class="mt-0 mb-1">Ei hakutuloksia</h5>
+         <% } %>
+         <ul class="list-unstyled">
+            <% placeData.results.forEach(place => { %>
+            <li class="media">
+               <img class="mr-3" src=".../64x64" alt="">
+               <div class="media-body">
+                  <h5 class="mt-0 mb-1">
+                     <a
+                        href="https://www.google.com/maps/search/?api=1&query=Google&query_place_id=<%= place.place_id %>"><%= place.name %></a>
+                  </h5>
+                  <p><%= place.formatted_address %></p>
+               </div>
+            </li>
+            <hr>
+            <% }) %>
+         </ul>
+      </div>
+   </div>
+
+</div>
+
+<% include ./partials/footer %>
