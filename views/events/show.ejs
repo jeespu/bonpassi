@@ -8,7 +8,11 @@
          <span class="text-black-50"><%= event.name %></span>
          <hr>
          <div class="card">
+            <% if (event.image) { %>
             <img class="card-img-top" src="<%= event.image %>" alt="">
+            <% } else { %>
+            <img class="card-img-top" src="/img/no_img.png" alt="">
+            <% } %>
             <div class="card-body">
                <h4 class="card-title"><a href="<%= event.url %>"><%= event.name %></a></h4>
                <strong>Aika ja Paikka</strong>
