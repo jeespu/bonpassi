@@ -47,7 +47,8 @@
             <li class="nav-item ml-auto"><a class="nav-link" href="#register" data-toggle="modal"
                   data-target="#registerModal">Rekisteröidy</a></li>
             <% } else { %>
-            <li class="nav-item ml-auto"><a class="nav-link" href="/user">Kirjauduttu käyttäjänä <%= currentUser.username %></a>
+            <li class="nav-item ml-auto"><a class="nav-link" href="/user">Kirjauduttu käyttäjänä
+                  <%= currentUser.username %></a>
             </li>
             <li class="nav-item ml-auto"><a class="nav-link" href="/logout">Kirjaudu Ulos</a></li>
             <% } %>
@@ -142,12 +143,10 @@
    </div>
 
    <!-- Taustavideo-->
-   <div id="video-container">
-      <video autoplay loop muted>
-         <source src="video.m4v" type="video/mp4">
-         Sorry, your browser doesn't support embedded videos.
-      </video>
-   </div>
+   <video autoplay loop muted>
+      <source src="video.m4v" type="video/mp4">
+      Sorry, your browser doesn't support embedded videos.
+   </video>
 
    <!-- Haku -->
    <div class="container">
