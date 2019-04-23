@@ -20,7 +20,7 @@
                <strong>Liput</strong>
                <p class="card-text"><%= event.tickets %></p>
                <p>
-                  <em>Submitted By <%= event.author.username %></em>
+                  <em>Tapahtuman on lisännyt: <%= event.author.username %></em>
                </p>
                <% if(event.author.id && currentUser && event.author.id.equals(currentUser._id)) { %>
                <a class="btn btn-warning text-white" href="/events/<%= event._id %>/edit">Muokkaa</a>
