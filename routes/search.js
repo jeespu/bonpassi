@@ -26,28 +26,39 @@ let options = {
    ]
 };
 
-router.get("/", (req, res) => {
-   if (!placeData) { res.redirect("back") }
-   // Get all events from DB
-   Event.find({}, (err, allEvents) => {
-      if (err)
-         console.log(err)
-      else {
-         //console.log(allEvents)
-         let fuse = new Fuse(allEvents, options);
-         let foundEvents = fuse.search(query);
-         res.render("search", { placeData: placeData, eventData: foundEvents, query: query });
-      }
-   })
-})
+// router.get("/", (req, res) => {
+//    if (!placeData) { res.redirect("back") }
+//    // Get all events from DB
+//    Event.find({}, (err, allEvents) => {
+//       if (err)
+//          console.log(err)
+//       else {
+//          //console.log(allEvents)
+//          let fuse = new Fuse(allEvents, options);
+//          let foundEvents = fuse.search(query);
+//          res.render("search", { placeData: placeData, eventData: foundEvents, query: query });
+//       }
+//    })
+// })
 
-router.post('/', (req, res) => {
-   query = req.body.query;
+router.get('/', (req, res) => {
+   query = req.query.query;
+   //console.log(query)
    let urlPlaces = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + query + '+in+jyväskylä&key=AIzaSyARxi3iKGDqUF6dr1WlHIgx_da-G2yZmvM';
    request(encodeURI(urlPlaces), (error, response, body) => {
       if (!error && response.statusCode === 200) {
          placeData = JSON.parse(body);
-         res.redirect('/search');
+         // Get all events from DB
+         Event.find({}, (err, allEvents) => {
+            if (err)
+               console.log(err)
+            else {
+               //console.log(allEvents)
+               let fuse = new Fuse(allEvents, options);
+               let foundEvents = fuse.search(query);
+               res.render("search", { placeData: placeData, eventData: foundEvents, query: query });
+            }
+         })
       }
    })
 })
