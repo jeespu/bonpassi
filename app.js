@@ -20,7 +20,7 @@ const eventRoutes = require("./routes/events"),
 
 // Database
 mongoose.set("useFindAndModify", false);
-mongoose.connect("mongodb://heroku_t3bhk87c:c41hp21eam24mtr3cvpe602m1d@ds143666.mlab.com:43666/heroku_t3bhk87c", { useNewUrlParser: true }, (err) => {
+mongoose.connect("CONNECTION STRING", { useNewUrlParser: true }, (err) => {
    if(err)
       console.log("ERROR: DB connection: " + err)
 });
